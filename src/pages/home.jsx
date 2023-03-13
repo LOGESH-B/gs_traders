@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { featchConstant } from '../redux/api'
-
+import Nav from '../components/nav'
 
 function Home() {
 
@@ -19,9 +19,9 @@ function Home() {
 
     return (
         <div>
-            <h1>Home</h1>
-            <button >Click</button>
-            {constants && <p>{constants.address}</p>}
+            <Nav/>
+
+            {/* {constants && <p>{constants.address}</p>} */}
         </div>
     )
 }
