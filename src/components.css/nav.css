@@ -1,0 +1,122 @@
+.abovenavd {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    color: white;
+    height: 40px;
+    align-items: center;
+}
+.abovenavm{
+    height: 10px;
+    background: none;
+}
+
+.logo {
+    height: 100px;
+    width: 200px;
+    position: relative;
+    bottom: 30px;
+}
+
+.button {
+    background-color: rgb(255, 127, 7);
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    color: white;
+
+}
+.content {
+    display: flex;
+    padding-bottom: 6px;
+    gap: 20px;
+    align-items: center;
+
+}
+
+
+
+.navfordesk {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20%;
+    background-color: white;
+    height: 70px;
+
+
+}
+
+
+.navformobile {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 70px;
+    margin-top: 10px;
+}
+.navformobile .logo{
+    height: 70px;
+    width: 100px;
+    position: static;
+}
+.navcontentmb1{
+    display: grid;
+    text-align: justify;
+    row-gap: .1px;
+}
+.navcontent {
+    display: flex;
+    gap: 20px;
+}
+.h{
+    font-size: medium;
+    -webkit-transition: .1s all;   
+    -webkit-transition-delay: .1s; 
+    -moz-transition: .1s all;   
+    -moz-transition-delay: .1s; 
+    -ms-transition: .1s all;   
+    -ms-transition-delay: .1s; 
+    -o-transition: .1s all;   
+    -o-transition-delay: .1s; 
+    transition: .1s all;   
+    transition-delay: .1s; 
+
+}
+.h:hover{
+    color:  rgb(255, 127, 7);
+    border-bottom: 4px solid  rgb(255, 127, 7);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+
+@media(min-width:481px){
+    .navformobile{
+        display: none;
+    }
+    .abovenavm{
+        display: none;
+    }
+}
+
+@media (max-width:480px) {
+    .navfordesk{
+        display: none;
+    }
+    .abovenavd{
+        display: none;
+    }
+    .abovenav{
+        display: none;
+      
+    }
+   
+
+   
+  
+
+}
