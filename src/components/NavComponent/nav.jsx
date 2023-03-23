@@ -1,7 +1,7 @@
 import React from 'react'
 import './nav.css'
 import {  FaPhoneAlt,FaMailBulk} from "react-icons/fa";
-import logo from '../assets/images/nav-logo.png'
+import logo from '../../assets/images/nav-logo.png'
 
 function Nav() {
     return (
