@@ -1,0 +1,237 @@
+.abovenavd {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    color: white;
+    height: 40px;
+    align-items: center;
+    background-color: black;
+    letter-spacing: 2px;
+    padding-right: 20px;
+}
+.abovenavm{
+    height: 10px;
+    background: none;
+}
+
+.logo {
+    height: 100px;
+    width: 175px;
+    position: relative;
+    bottom: 30px;
+}
+
+.button {
+    background-color: rgb(255, 127, 7);
+    width: 200px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: white;
+}
+.button:hover{
+    transform: scale(1);
+    box-shadow: 0px 10px 10px #888888;
+    cursor: pointer;
+}
+.content {
+    display: flex;
+    padding-bottom: 6px;
+    gap: 20px;
+    align-items: center;
+
+}
+
+
+
+.navfordesk {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    background-color: white;
+    height: 70px;
+
+
+}
+
+
+.navformobile {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 70px;
+    margin-top: 10px;
+}
+.navformobile .logo{
+    height: 70px;
+    width: 100px;
+    position: static;
+}
+.navcontentmb1{
+    display: grid;
+    text-align: justify;
+    row-gap: .1px;
+}
+.navcontent {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.h{
+    font-size: medium;
+    text-decoration: none;
+    color: grey;
+    cursor: pointer;
+
+    -webkit-transition: .1s all;   
+    -webkit-transition-delay: .1s; 
+    -moz-transition: .1s all;   
+    -moz-transition-delay: .1s; 
+    -ms-transition: .1s all;   
+    -ms-transition-delay: .1s; 
+    -o-transition: .1s all;   
+    -o-transition-delay: .1s; 
+    transition: .1s all;   
+    transition-delay: .1s; 
+
+}
+.h:hover{
+    color:  rgb(255, 127, 7);
+    border-bottom: 4px solid  rgb(255, 127, 7);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+
+
+nav {
+    color: #94918c;
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    
+    
+  }
+  nav ul {
+    list-style: none;
+   
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #52504c;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+  nav ul li a:hover {
+    color:#fa9805;
+  }
+
+
+
+  
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background:#fa9805;
+    height: 3px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 90%;
+  }
+  
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+  
+  nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+
+
+.abovenav{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 5%;
+    padding-top: 1%;
+    gap: 2%;
+}
+
+.text{
+    color: #fa9805;
+
+    font-size: 75%;
+}
+
+.wholenav{
+  background-color: #94918c;
+}
+
+
+@media(min-width:481px){
+    .navformobile{
+        display: none;
+    }
+    .abovenavm{
+        display: none;
+    }
+}
+
+@media (max-width:480px) {
+    .navfordesk{
+        display: none;
+    }
+    .abovenavd{
+        display: none;
+    }
+    .abovenav{
+        display: none;
+      
+    }
+   
+
+   
+  
+
+}

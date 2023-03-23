@@ -1,0 +1,20 @@
+.home {
+    /* background-image: url('../../assets/images/home_bg-min.jpeg'); */
+    background-size: cover;
+    background-position: center;
+}
+
+.homecontent {
+    height: 100vh;
+}
+
+@media (max-width:500px) {
+    .home {
+        /* background-image: url('../../assets/images/home_bg-min.jpeg'); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+
+    }
+}
