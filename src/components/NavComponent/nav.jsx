@@ -1,7 +1,7 @@
 import React from 'react'
 import './nav.css'
 import {  FaPhoneAlt,FaMailBulk} from "react-icons/fa";
-import logo from '../../assets/images/nav-logo.png'
+import logo from '../../assets/images/nav-logo1.png'
 
 function Nav() {
     return (
@@ -10,6 +10,7 @@ function Nav() {
         <div className='abovenavd d-flex fs-6'>
             <FaPhoneAlt />
             <small>9597649181</small>
+            <small>|</small>
             <FaMailBulk />
             <small>gstraders@gmail.com</small>
         </div>

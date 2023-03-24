@@ -1,14 +1,123 @@
-.home {
-    /* background-image: url('../../assets/images/home_bg-min.jpeg'); */
+.hero {
+    background-image: url('../../assets/images/home_bg1.jpg');
     background-size: cover;
     background-position: center;
-}
-
-.homecontent {
     height: 100vh;
 }
 
-@media (max-width:500px) {
+/* second page */
+
+.secondpage{
+    
+    height: 100vh;
+    background-image: url(../../assets/images/secondpage.webp);   
+    background-repeat: no-repeat;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+    text-align: justify;
+    
+}
+.second1{
+    padding: 100px;
+    margin-right:100px ; 
+    margin-left: 150px;
+
+}
+.second2{
+    padding: 100px;
+    margin-right:100px ; 
+    margin-left: 100px;
+
+}
+-------
+
+.services{
+    height: 100vh;
+}
+
+.s{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.s1{
+    display: flex;
+    justify-content: center;
+      align-items: center;
+     text-align: justify ;
+     
+}
+.s2{
+   text-align: justify;
+     border: solid 1px gray;
+     width: 20%;   
+}
+.image-service{
+    height: 400px;
+    width: 75%;
+  
+  }
+  .servicelist{
+    margin-left: 150px;
+    gap: 40px;
+  }
+
+  .servicelist1{
+    display: flex;
+    justify-content: end;
+    margin-right: 135px;
+    gap: 40px;
+
+  }
+  .simg{
+    height: 70px;
+    width: 70px;
+    margin-bottom: 15px;
+  }
+  .btnarrow{
+   position: relative;
+   margin-right: 35px;
+
+    
+  }
+  .btnclass{
+    background-color: rgb(255, 127, 7);
+    width: 45px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 10%;
+   
+  }
+  .btnclass1{
+    background-color: rgb(255, 127, 7);
+    width: 45px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    margin-top: 10%;
+   
+  }
+  .learn{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .specialcard{
+    background-image: url(../../assets/images/serviceimg.webp);
+    color:beige;    
+}
+
+@media (max-width:800px) {
     .home {
         /* background-image: url('../../assets/images/home_bg-min.jpeg'); */
         background-size: cover;
@@ -16,5 +125,26 @@
         background-position: center;
 
 
+    }
+    .servicelist{
+        margin: 0px;
+      }
+      .servicelist1{
+        margin-right: 0px;
+      }
+      .s2{
+        width: auto;
+      }
+      .second1{
+        padding: 100px;
+        margin-right:0px ; 
+        margin-left: 0px;
+    
+    }
+    .second2{
+        padding: 5px;
+        margin-right:0px ; 
+        margin-left: 0px;
+    
     }
 }
