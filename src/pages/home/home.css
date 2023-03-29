@@ -1,20 +1,215 @@
-.home {
-    /* background-image: url('../../assets/images/home_bg-min.jpeg'); */
+
+ @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+
+.hero {
+    background-image: url('../../assets/images/home_bgv.jpg');
     background-size: cover;
     background-position: center;
+    height: 100vh;
+    
+
+}
+.cardfront{
+  width: 20%;
+  margin-left: 10%;
+
+  color: white;
+ 
 }
 
-.homecontent {
+.line{
+  margin-top: 15%;
+}
+
+.helo{
+  font-family: 'Comforter Brush', cursive;
+  font-size: 60px;
+}
+.mail{
+  color: black;
+  height: 50px;
+  margin-top: 15%;
+}
+
+.m{
+  background-color: white;
+  display: flex;
+  align-items: center;
+
+}
+.m1{
+  background-color: orangered;
+  display: flex;
+  align-items: center;
+  color: white;
+
+}
+.number{
+  border: 2px solid white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+}
+
+
+/* .blur{
+  background-color: black;
+  opacity: 0.5;
+  height: 100%;
+
+
+} */
+
+/* second page */
+
+.secondpage{
+    
+    height: 100vh;
+    background-image: url(../../assets/images/secondpage.webp);   
+    background-repeat: no-repeat;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+    text-align: justify;
+    
+}
+.second1{
+    padding: 100px;
+    margin-right:100px ; 
+    margin-left: 150px;
+
+}
+.second2{
+    padding: 100px;
+    margin-right:100px ; 
+    margin-left: 100px;
+
+}
+
+
+/* services page */
+.services{
     height: 100vh;
 }
 
-@media (max-width:500px) {
-    .home {
-        /* background-image: url('../../assets/images/home_bg-min.jpeg'); */
+.s{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.s1{
+    display: flex;
+    justify-content: center;
+      align-items: center;
+     text-align: justify ;
+     
+}
+.s2{
+   text-align: justify;
+     border: solid 1px gray;
+     width: 20%;   
+}
+.image-service{
+    height: 400px;
+    width: 75%;
+  
+  }
+  .servicelist{
+    margin-left: 150px;
+    gap: 40px;
+  }
+
+  .servicelist1{
+    display: flex;
+    justify-content: end;
+    margin-right: 135px;
+    gap: 40px;
+
+  }
+  .simg{
+    height: 70px;
+    width: 70px;
+    margin-bottom: 15px;
+  }
+  .btnarrow{
+   position: relative;
+   margin-right: 35px;
+
+    
+  }
+  .btnclass{
+    background-color: rgb(255, 127, 7);
+    width: 45px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 10%;
+   
+  }
+  .btnclass1{
+    background-color: rgb(255, 127, 7);
+    width: 45px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    margin-top: 10%;
+   
+  }
+  .learn{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .specialcard{
+    background-image: url(../../assets/images/serviceimg.webp);
+    color:beige;    
+}
+
+
+
+@media (max-width:800px) {
+    /* .home {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-
-
+  } */
+    .servicelist{
+        margin: 0px;
+      }
+      .servicelist1{
+        margin-right: 0px;
+      }
+      .s2{
+        width: auto;
+      }
+      .second1{
+        padding: 100px;
+        margin-right:0px ; 
+        margin-left: 0px;
+    
     }
+    .second2{
+        padding: 5px;
+        margin-right:0px ; 
+        margin-left: 0px;
+    
+    }
+    .cardfront{
+      width: 100%;
+      margin-left: 0%;
+     
+      color: white;
+      padding: 15%;
+    }
+    
 }
