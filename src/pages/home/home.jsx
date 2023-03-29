@@ -5,7 +5,7 @@ import { featchConstant } from '../../redux/api'
 import Nav from '../../components/NavComponent/nav'
 import img from '../../assets/images/serviceimg.webp'
 import simg from '../../assets/images/gsLogo.png'
-
+import { FaPhoneAlt, FaMailBulk } from "react-icons/fa";
 import './home.css'
 function Home() {
 
@@ -20,9 +20,55 @@ function Home() {
 
     return (
         <div >
-
+            <Nav />
             <div className='hero' >
-                <Nav /> </div>
+
+
+
+
+
+                <div className='cardfront pt-5'>
+
+                    <h1 className='fw-bold'> <span className='helo' >Hello</span> we are the GS groups</h1>
+
+                    <div className='line'>
+                        <small>Largest suppliers in sivagiri</small>
+                        <hr />
+                        <small>Largest suppliers in sivagiri</small>
+                        <hr />
+                        <small>Largest suppliers in sivagiri</small>
+                        <hr />
+                    </div>
+
+
+
+                    <div className='row mail'>
+                        <div className='col-8 m'>
+
+                            Enter your Mail
+                        </div>
+                        <div className='col-4 m1'>
+                            go mail
+
+                        </div>
+
+                    </div>
+                    or
+
+                    <div className='number'>
+                        <FaPhoneAlt />
+                        <small> call us at 123456789</small>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+
+
             <div className='secondpage'>
                 <div className='row'>
                     <div className='col-lg-4 second1'>
@@ -37,11 +83,9 @@ function Home() {
                         </div>
                     </div>
                     <div className='col-lg-4 second2'>
-                    Ratione accusamus at perferendis atque deleniti iure vel iusto delectus natus nisi corporis nesciunt fugit tempore quas, officiis, enim illum autem asperiores inventore suscipit quidem perspiciatis, eaque aspernatur eligendi. Doloribus suscipit neque adipisci saepe sint laudantium delectus dignissimos, rem sapiente.
+                        Ratione accusamus at perferendis atque deleniti iure vel iusto delectus natusisi corporis nesciunt fugit tempore quas, officiis, enim illum autem asperiores inventore suscipit quidem perspiciatis, eaque aspernatur eligendi. Doloribus suscipit neque adipisci saepe sint laudantium delectus dignissimos, rem sapiente.
                     </div>
-                </div>
-
-            </div>
+                </div>            </div>
             <div className='services'>
                 <div className='row me-0'>
                     <div className="col-lg-4 s "><h4 className='fs-1 fw-bold pb-3'>OUR SERVICES</h4></div>
@@ -121,7 +165,7 @@ function Home() {
                     <div className='col-lg-3 col-sm-5 s2 pt-5 px-4 pb-2'>
 
                         <div>
-                            <img className='simg' src={simg} alt="" />
+                            <img className='simg ' src={simg} alt="" />
                         </div>
                         <h5 className='fw-bold'>Heading</h5>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vitae magni nesciunt odio veritatis veniam perspiciatis totam, aliquid earum quia?
@@ -155,9 +199,15 @@ function Home() {
             </div>
 
 
+
+
             {/* {constants && <p>{constants.address}</p>} */}
         </div>
     )
 }
 
 export default Home
+
+
+
+

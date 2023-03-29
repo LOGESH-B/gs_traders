@@ -1,9 +1,66 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+
 .hero {
-    background-image: url('../../assets/images/home_bg1.jpg');
+    background-image: url('../../assets/images/home_bgv.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
+    
+
 }
+.cardfront{
+  width: 20%;
+  margin-left: 10%;
+
+  color: white;
+ 
+}
+
+.line{
+  margin-top: 15%;
+}
+
+.helo{
+  font-family: 'Comforter Brush', cursive;
+  font-size: 60px;
+}
+.mail{
+  color: black;
+  height: 50px;
+  margin-top: 15%;
+}
+
+.m{
+  background-color: white;
+  display: flex;
+  align-items: center;
+
+}
+.m1{
+  background-color: orangered;
+  display: flex;
+  align-items: center;
+  color: white;
+
+}
+.number{
+  border: 2px solid white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+}
+
+
+/* .blur{
+  background-color: black;
+  opacity: 0.5;
+  height: 100%;
+
+
+} */
 
 /* second page */
 
@@ -33,8 +90,9 @@
     margin-left: 100px;
 
 }
--------
 
+
+/* services page */
 .services{
     height: 100vh;
 }
@@ -117,15 +175,14 @@
     color:beige;    
 }
 
+
+
 @media (max-width:800px) {
-    .home {
-        /* background-image: url('../../assets/images/home_bg-min.jpeg'); */
+    /* .home {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-
-
-    }
+  } */
     .servicelist{
         margin: 0px;
       }
@@ -147,4 +204,12 @@
         margin-left: 0px;
     
     }
+    .cardfront{
+      width: 100%;
+      margin-left: 0%;
+     
+      color: white;
+      padding: 15%;
+    }
+    
 }
