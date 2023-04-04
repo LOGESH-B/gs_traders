@@ -1,7 +1,7 @@
 .abovenavd {
     display: flex;
     justify-content: end;
-    gap: 10px;
+
     color: white;
     height: 40px;
     align-items: center;
@@ -9,6 +9,12 @@
     letter-spacing: 2px;
     padding-right: 20px;
 }
+.abovenavd1{
+    display: flex;
+   gap: 12px;
+}
+
+
 .abovenavm{
     height: 10px;
     background: none;
@@ -36,17 +42,26 @@
     box-shadow: 0px 10px 10px #888888;
     cursor: pointer;
 }
+.navcontent {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    
+}
+
 .content {
     display: flex;
-    padding-bottom: 6px;
+    padding-bottom: 30px;
     gap: 20px;
     align-items: center;
+    justify-content: center;
+    
 
 }
 
 
 
-.navfordesk {
+.nav {
     display: flex;
     justify-content: space-between;
     padding-left: 5%;
@@ -55,35 +70,28 @@
 
 
 }
-.navcontent {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
+
 .h{
     font-size: medium;
     text-decoration: none;
     color: grey;
     cursor: pointer;
-
-    -webkit-transition: .1s all;   
-    -webkit-transition-delay: .1s; 
-    -moz-transition: .1s all;   
-    -moz-transition-delay: .1s; 
-    -ms-transition: .1s all;   
-    -ms-transition-delay: .1s; 
-    -o-transition: .1s all;   
-    -o-transition-delay: .1s; 
-    transition: .1s all;   
-    transition-delay: .1s; 
-
 }
 .h:hover{
     color:  rgb(255, 127, 7);
     border-bottom: 4px solid  rgb(255, 127, 7);
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -ms-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
+}
+
+
+
+@media(max-width:800px){
+    .content {
+        display: none;
+    }
+    .abovenavd1{
+       display: none !important
+       
+    }
+    
+    
 }

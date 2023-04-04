@@ -51,16 +51,11 @@
   align-items: center;
   color: white;
   justify-content: center;
+  gap: 12px;
 }
 
 
-/* .blur{
-  background-color: black;
-  opacity: 0.5;
-  height: 100%;
 
-
-} */
 
 /* second page */
 
@@ -93,9 +88,6 @@
 
 
 /* services page */
-.services{
-    height: 100vh;
-}
 
 .s{
    
@@ -137,6 +129,11 @@
     width: 70px;
     margin-bottom: 15px;
   }
+  .simgb{
+    height: 70px;
+    width: 150px;
+    margin-bottom: 15px;
+  }
   .btnarrow{
    position: relative;
    margin-right: 35px;
@@ -175,6 +172,65 @@
     color:beige;    
 }
 
+.ownerimage{
+  height: 100%;
+  width: 45%;
+}
+.c2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: justify;
+  padding: 15% 30% 15% 5%;
+}
+.c1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+
+
+
+.owner1{
+  background-color: none;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+
+.w{
+  margin-left: 9%;
+}
+.w1{
+  margin-left:2%;
+}
+.workname{
+  display: grid;
+  gap: 0px;
+}
+.simage{
+  height: 80%;
+  width: 70%;
+  margin-left: 22%;
+}
+.ser{
+  text-align: justify;
+  padding: 5%;
+}
+.btnclass2{
+  background-color: rgb(255, 127, 7);
+  width: 45px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  margin-top: 1%;
+ 
+}
 
 
 @media (max-width:800px) {

@@ -8,27 +8,36 @@ function Nav() {
         <>
 
             <div className='abovenavd d-flex fs-6'>
-                <FaPhoneAlt />
-                <small>9597649181</small>
-                <small>|</small>
-                <FaMailBulk />
-                <small>gstraders@gmail.com</small>
+                <div className='abovenavd1'>
+                    <FaPhoneAlt />
+                    <small>9597649181</small>
+                    <small>|</small>
+                    <FaMailBulk />
+                    <small>gstraders@gmail.com</small>
+
+
+                </div>
+
+
+
             </div>
 
-            <div className='navfordesk'>
+            <div className='nav'>
                 <div className='navcontent1'>
                     <img className='logo' src={logo} alt="" />
                 </div>
 
-                
-                <div  class=" navcontent" >
-                    <div className='content'>
-                        <a className='h' style={{ fontSize: 'medium' }}>HOME</a>
-                        <a className='h' style={{ fontSize: 'medium' }}>ABOUT</a>
-                        <a className='h' style={{ fontSize: 'medium' }}>PRODUCTS</a>
+
+                <div className=" navcontent" >
+                    
+
+                        <div className='content'>
+                            <a className='h' style={{ fontSize: 'medium' }}>HOME</a>
+                            <a className='h' style={{ fontSize: 'medium' }}>ABOUT</a>
+                            <a className='h' style={{ fontSize: 'medium' }}>PRODUCTS</a>
 
 
-                    </div>
+                        </div>
 
                     <div className='button'>
                         <span className='pe-4'>Book Now</span><span className='fs-1 mb-1'>&rarr;</span>
@@ -39,9 +48,9 @@ function Nav() {
 
             </div>
 
-          
 
-            
+
+
 
 
         </>
