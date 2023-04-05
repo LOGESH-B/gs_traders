@@ -205,12 +205,10 @@
   margin-left: 9%;
 }
 .w1{
-  margin-left:2%;
+  margin-left:9%;
+  margin-top: 0%  !important;
 }
-.workname{
-  display: grid;
-  gap: 0px;
-}
+
 .simage{
   height: 80%;
   width: 70%;

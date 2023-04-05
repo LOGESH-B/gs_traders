@@ -15,6 +15,7 @@ import constr from '../../assets/logo\'s/GS-logo-construction.png'
 import traders from '../../assets/logo\'s/GS-logo-traders.png'
 import Carousel from 'react-bootstrap/Carousel';
 import { FaPhoneAlt, FaMailBulk, FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
+import { Link } from 'react-router-dom'
 
 import './home.css'
 function Home() {
@@ -98,7 +99,7 @@ function Home() {
                 </div>            </div>
             <div className='services'>
                 <div className='row me-0'>
-                    <div className="col-lg-4 s "><h4 className='fs-1 fw-bold pb-3'>OUR SERVICES</h4></div>
+                    <div className="col-lg-4 s "><h4 className='fs-1 fw-bold pb-3'>OUR BRANCHES</h4></div>
                     <div className="col-lg-4  s1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur temporibus labore officia natus illo ex, rerum rem ad? Quasi, illum accusantium vitae consectetur quisquam saepe.</div>
 
                     <div className="col-lg-4 col-sm-2">
@@ -116,8 +117,11 @@ function Home() {
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vitae magni nesciunt odio veritatis veniam perspiciatis totam, aliquid earum quia?
                         <div className='btnclass'>
                             <div className='learn'>
-
+                                
+                                <Link to='trade' style={{textDecoration:'none',color:'black'}}>
                                 <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+                                </Link>
+
 
                             </div>
                         </div>
@@ -162,7 +166,7 @@ function Home() {
                         <div>
                             <img className='simgb' src={constr} alt="" />
                         </div>
-                        <h5 className='fw-bold'>Heading</h5>
+                        <h5 className='fw-bold'>Construction</h5>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vitae magni nesciunt odio veritatis veniam perspiciatis totam, aliquid earum quia?
                         <div className='btnclass'>
                             <div className='learn'>
@@ -177,7 +181,7 @@ function Home() {
                         <div>
                             <img className='simgb ' src={traders} alt="" />
                         </div>
-                        <h5 className='fw-bold'>Heading</h5>
+                        <h5 className='fw-bold'>Traders</h5>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vitae magni nesciunt odio veritatis veniam perspiciatis totam, aliquid earum quia?
                         <div className='btnclass'>
                             <div className='learn'>
@@ -192,7 +196,7 @@ function Home() {
                         <div>
                             <img className='simg' src={simg} alt="" />
                         </div>
-                        <h5 className='fw-bold'>Heading</h5>
+                        <h5 className='fw-bold'>Group</h5>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vitae magni nesciunt odio veritatis veniam perspiciatis totam, aliquid earum quia?
                         <div className='btnclass'>
                             <div className='learn'>
