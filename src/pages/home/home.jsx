@@ -17,6 +17,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import { FaPhoneAlt, FaMailBulk, FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 
+import Brands from './brand'
+
 import './home.css'
 function Home() {
 
@@ -235,6 +237,11 @@ function Home() {
 
 
                 </div>
+            </div>
+
+
+            <div>
+                <Brands/>
             </div>
 
             <div className='works'>
