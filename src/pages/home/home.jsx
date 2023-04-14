@@ -16,8 +16,8 @@ import traders from '../../assets/logo\'s/GS-logo-traders.png'
 import Carousel from 'react-bootstrap/Carousel';
 import { FaPhoneAlt, FaMailBulk, FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
 import { Link } from 'react-router-dom'
+import logo from '../../assets/logo\'s/GS-logo.png'
 
-import Brands from './brand'
 
 import './home.css'
 function Home() {
@@ -31,9 +31,13 @@ function Home() {
 
 
 
+    
+
+
+
     return (
         <div >
-            <Nav />
+            <Nav img={logo} />
             <div className='hero' >
 
 
@@ -237,11 +241,6 @@ function Home() {
 
 
                 </div>
-            </div>
-
-
-            <div>
-                <Brands/>
             </div>
 
             <div className='works'>

@@ -1,0 +1,24 @@
+
+.phead{
+    height: 50vh;
+    background-color: black;
+    background-image: url('../../assets/images/pheader.jpeg');
+
+    background-size: cover;
+    background-position: center;
+
+}
+.headercontent{
+    color: white;
+    padding: 5%;
+}
+.headercontent h1{
+    color: orange;
+   
+}
+.headbtn{
+    border-radius: 12px;
+    height: 50px;
+    margin-top: 5%;
+    box-shadow: none;
+}

@@ -119,7 +119,7 @@
 
   .servicelist1{
     display: flex;
-    justify-content: end;
+    justify-content:flex-end;
     margin-right: 135px;
     gap: 40px;
 
