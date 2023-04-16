@@ -52,6 +52,7 @@
   color: white;
   justify-content: center;
   gap: 12px;
+ 
 }
 
 
@@ -80,7 +81,7 @@
 
 }
 .second2{
-    padding: 100px;
+    
     margin-right:100px ; 
     margin-left: 100px;
 
@@ -109,7 +110,7 @@
 }
 .image-service{
     height: 400px;
-    width: 75%;
+    width: 100%;
   
   }
   .servicelist{
@@ -194,6 +195,13 @@
 
 
 
+#go-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
 .owner1{
   background-color: none;
   margin-top: 5%;
@@ -229,14 +237,12 @@
   margin-top: 1%;
  
 }
-
+.contact{
+  height: 70vh;
+  background-color: black;
+}
 
 @media (max-width:800px) {
-    /* .home {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-  } */
     .servicelist{
         margin: 0px;
       }
@@ -263,7 +269,15 @@
       margin-left: 0%;
      
       color: white;
-      padding: 15%;
+      padding: 10%;
+      padding-top: 30% !important;
+    }
+    .specialcard{
+      display: none;
+    }
+    .ownerimage{
+      height: 100%;
+      width: 100%;
     }
     
 }

@@ -5,6 +5,9 @@ import { store } from './redux/store';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Traders from './pages/products/traders/trader';
+import Bluemetal from './pages/products/bluemetal';
+import Bricks from './pages/products/bricks';
+import Construction from './pages/products/construction';
 function App() {
   return (
     <Provider store={store}>
@@ -17,6 +20,9 @@ function App() {
         <Routes>
         <Route path="/" element={<Home/>} />
             <Route path="trade" element={<Traders/>} />
+            <Route path="bluemetal" element={<Bluemetal/>} />
+            <Route path="bricks" element={<Bricks/>} />
+            <Route path="construction" element={<Construction/>} />
         
         </Routes>
       </BrowserRouter>

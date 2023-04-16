@@ -29,15 +29,35 @@ function Home() {
 
     }, [])
 
+    const scrollToTopBtn = document.getElementById("go-to-top-btn");
+if(scrollToTopBtn){
+    window.addEventListener("scroll", () => {
+      // If user scrolls more than 20px from top, show the button
+      if (window.pageYOffset > 20) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    });
 
 
-    
+    scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    }
 
 
 
     return (
         <div >
+
+             
+
             <Nav img={logo} />
+            <button id="go-to-top-btn">Go to top</button>
             <div className='hero' >
 
 
@@ -70,7 +90,11 @@ function Home() {
                         </div>
 
                     </div>
-                    or
+
+                    <div style={{ marginLeft: '50%' }}>
+                        or
+                    </div>
+
 
                     <div className='number'>
                         <FaPhoneAlt />
@@ -99,16 +123,16 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-4 second2'>
+                    <div className='col-lg-4 second2 p-5'>
                         Ratione accusamus at perferendis atque deleniti iure vel iusto delectus natusisi corporis nesciunt fugit tempore quas, officiis, enim illum autem asperiores inventore suscipit quidem perspiciatis, eaque aspernatur eligendi. Doloribus suscipit neque adipisci saepe sint laudantium delectus dignissimos, rem sapiente.
                     </div>
                 </div>            </div>
-            <div className='services'>
+            <div id='products' className='services'>
                 <div className='row me-0'>
-                    <div className="col-lg-4 s "><h4 className='fs-1 fw-bold pb-3'>OUR BRANCHES</h4></div>
-                    <div className="col-lg-4  s1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur temporibus labore officia natus illo ex, rerum rem ad? Quasi, illum accusantium vitae consectetur quisquam saepe.</div>
+                    <div className="col-lg-4 s "><h4 style={{ color: 'orangered' }} className='fs-1 fw-bold pb-3 mt-3'>OUR BRANCHES</h4></div>
+                    <div className="col-lg-4 p-4 s1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur temporibus labore officia natus illo ex, rerum rem ad? Quasi, illum accusantium vitae consectetur quisquam saepe.</div>
 
-                    <div className="col-lg-4 col-sm-2">
+                    <div className="col-lg-4 col-sm-2 p-3">
                         <img src={img} className='image-service' alt="" />
                     </div>
                 </div>
@@ -123,9 +147,9 @@ function Home() {
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque vitae magni nesciunt odio veritatis veniam perspiciatis totam, aliquid earum quia?
                         <div className='btnclass'>
                             <div className='learn'>
-                                
-                                <Link to='trade' style={{textDecoration:'none',color:'black'}}>
-                                <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+
+                                <Link to='bricks' style={{ textDecoration: 'none', color: 'black' }}>
+                                    <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
                                 </Link>
 
 
@@ -142,7 +166,9 @@ function Home() {
                         <div className='btnclass'>
                             <div className='learn'>
 
-                                <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+                            <Link to='bluemetal' style={{ textDecoration: 'none', color: 'black' }}>
+                                    <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+                                </Link>
 
                             </div>
                         </div>
@@ -157,7 +183,9 @@ function Home() {
                         <div className='btnclass'>
                             <div className='learn'>
 
-                                <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+                            <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+                                    <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+                                </Link>
 
                             </div>
                         </div>
@@ -177,7 +205,9 @@ function Home() {
                         <div className='btnclass'>
                             <div className='learn'>
 
-                                <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+                            <Link to='construction' style={{ textDecoration: 'none', color: 'black' }}>
+                                    <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+                                </Link>
 
                             </div>
                         </div>
@@ -192,7 +222,9 @@ function Home() {
                         <div className='btnclass'>
                             <div className='learn'>
 
-                                <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+                            <Link to='trade' style={{ textDecoration: 'none', color: 'black' }}>
+                                    <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+                                </Link> 
 
                             </div>
                         </div>
@@ -207,7 +239,9 @@ function Home() {
                         <div className='btnclass'>
                             <div className='learn'>
 
-                                <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+                            <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+                                    <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+                                </Link> 
 
                             </div>
                         </div>
@@ -220,14 +254,14 @@ function Home() {
 
             <div className='owner1 row'>
 
-                <div className='col-lg-6 c1'>
+                <div className='col-lg-6 c1 p-3'>
 
                     <img src={oimg} className='ownerimage' alt="" />
 
 
                 </div>
-                <div className='col-lg-6 c2'>
-                    <div>
+                <div className='col-lg-6 c2 ps-5'>
+                    <div className='ms-5'>
                         <span className='quote'><FaQuoteLeft /></span>    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, veritatis. Quas suscipit natus possimus dolorem incidunt. Harum, magnam debitis? Ex unde illum cum amet id? <FaQuoteRight />
                         <div className='btnclass1'>
                             <div className='learn'>
@@ -244,242 +278,252 @@ function Home() {
             </div>
 
             <div className='works'>
-                
+
 
                 <Carousel>
                     <Carousel.Item>
 
-                    <div className='works'>
-                <div className='workname'>
-                    <div className="col-lg-4  w "><h4 className='fs-1 fw-bold pb-3 '>OUR CONSTRUCTION</h4></div>
-                    <div className="col-lg-4 w1 "><h4 className='fs-1 fw-bold pb-3'>SERVICES</h4></div>
+                        <div className='works'>
+                            <div className='workname'>
+                                <div className="col-lg-4  w "><h4 className='fs-1 fw-bold pb-3 '>OUR CONSTRUCTION</h4></div>
+                                <div className="col-lg-4 w1 "><h4 className='fs-1 fw-bold pb-3'>SERVICES</h4></div>
 
-
-                </div>
-
-                <div>
-                    <div className='row'>
-                        <div className='col-lg-6'>
-
-                            <img src={s1} className='simage' alt="" />
-
-                        </div>
-                        <div className='col-lg-6 '>
-                            <div className='ser'>
-                                <div ><h4 className='fs-5 fw-bold'>Building in Sivagiri</h4></div>
-                                <br />
-                                <div>
-                                    building for company  and house
-                                </div>
-                                <br />
-                                <div>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, eaque?
-                                </div>
-                                <div className='btnclass2'>
-                                    <div className='learn'>
-
-                                        <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
-
-                                    </div>
-                                </div>
 
                             </div>
 
+                            <div>
+                                <div className='row'>
+                                    <div className='col-lg-6'>
+
+                                        <img src={s1} className='simage' alt="" />
+
+                                    </div>
+                                    <div className='col-lg-6 '>
+                                        <div className='ser'>
+                                            <div ><h4 className='fs-5 fw-bold'>Building in Sivagiri</h4></div>
+                                            <br />
+                                            <div>
+                                                building for company  and house
+                                            </div>
+                                            <br />
+                                            <div>
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, eaque?
+                                            </div>
+                                            <div className='btnclass2'>
+                                                <div className='learn'>
+
+                                                    <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                         </div>
-
-                    </div>
-                </div>
-
-
-            </div>
                     </Carousel.Item>
 
                     <Carousel.Item>
-                    <div className='works'>
-                <div className='workname'>
-                    <div className="col-lg-4  w "><h4 className='fs-1 fw-bold pb-3 '>OUR CONSTRUCTION</h4></div>
-                    <div className="col-lg-4 w1 "><h4 className='fs-1 fw-bold pb-3'>SERVICES</h4></div>
+                        <div className='works'>
+                            <div className='workname'>
+                                <div className="col-lg-4  w "><h4 className='fs-1 fw-bold pb-3 '>OUR CONSTRUCTION</h4></div>
+                                <div className="col-lg-4 w1 "><h4 className='fs-1 fw-bold pb-3'>SERVICES</h4></div>
 
-
-                </div>
-
-                <div>
-                    <div className='row'>
-                        <div className='col-lg-6'>
-
-                            <img src={s1} className='simage' alt="" />
-
-                        </div>
-                        <div className='col-lg-6 '>
-                            <div className='ser'>
-                                <div ><h4 className='fs-5 fw-bold'>Building in Sivagiri</h4></div>
-                                <br />
-                                <div>
-                                    building for company  and house
-                                </div>
-                                <br />
-                                <div>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, eaque?
-                                </div>
-                                <div className='btnclass2'>
-                                    <div className='learn'>
-
-                                        <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
-
-                                    </div>
-                                </div>
 
                             </div>
 
+                            <div>
+                                <div className='row'>
+                                    <div className='col-lg-6'>
+
+                                        <img src={s1} className='simage' alt="" />
+
+                                    </div>
+                                    <div className='col-lg-6 '>
+                                        <div className='ser'>
+                                            <div ><h4 className='fs-5 fw-bold'>Building in Sivagiri</h4></div>
+                                            <br />
+                                            <div>
+                                                building for company  and house
+                                            </div>
+                                            <br />
+                                            <div>
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, eaque?
+                                            </div>
+                                            <div className='btnclass2'>
+                                                <div className='learn'>
+
+                                                    <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                         </div>
-
-                    </div>
-                </div>
-
-
-            </div>
                     </Carousel.Item>
 
                     <Carousel.Item>
-                    <div className='works'>
-                <div className='workname'>
-                    <div className="col-lg-4  w "><h4 className='fs-1 fw-bold pb-3 '>OUR CONSTRUCTION</h4></div>
-                    <div className="col-lg-4 w1 "><h4 className='fs-1 fw-bold pb-3'>SERVICES</h4></div>
+                        <div className='works'>
+                            <div className='workname'>
+                                <div className="col-lg-4  w "><h4 className='fs-1 fw-bold pb-3 '>OUR CONSTRUCTION</h4></div>
+                                <div className="col-lg-4 w1 "><h4 className='fs-1 fw-bold pb-3'>SERVICES</h4></div>
 
-
-                </div>
-
-                <div>
-                    <div className='row'>
-                        <div className='col-lg-6'>
-
-                            <img src={s1} className='simage' alt="" />
-
-                        </div>
-                        <div className='col-lg-6 '>
-                            <div className='ser'>
-                                <div ><h4 className='fs-5 fw-bold'>Building in Sivagiri</h4></div>
-                                <br />
-                                <div>
-                                    building for company  and house
-                                </div>
-                                <br />
-                                <div>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, eaque?
-                                </div>
-                                <div className='btnclass2'>
-                                    <div className='learn'>
-
-                                        <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
-
-                                    </div>
-                                </div>
 
                             </div>
 
+                            <div>
+                                <div className='row'>
+                                    <div className='col-lg-6'>
+
+                                        <img src={s1} className='simage' alt="" />
+
+                                    </div>
+                                    <div className='col-lg-6 '>
+                                        <div className='ser'>
+                                            <div ><h4 className='fs-5 fw-bold'>Building in Sivagiri</h4></div>
+                                            <br />
+                                            <div>
+                                                building for company  and house
+                                            </div>
+                                            <br />
+                                            <div>
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, eaque?
+                                            </div>
+                                            <div className='btnclass2'>
+                                                <div className='learn'>
+
+                                                    <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                         </div>
-
-                    </div>
-                </div>
-
-
-            </div>
                     </Carousel.Item>
 
                     <Carousel.Item>
-                    <div className='works'>
-                <div className='workname'>
-                    <div className="col-lg-4  w "><h4 className='fs-1 fw-bold pb-3 '>OUR CONSTRUCTION</h4></div>
-                    <div className="col-lg-4 w1 "><h4 className='fs-1 fw-bold pb-3'>SERVICES</h4></div>
+                        <div className='works'>
+                            <div className='workname'>
+                                <div className="col-lg-4  w "><h4 className='fs-1 fw-bold pb-3 '>OUR CONSTRUCTION</h4></div>
+                                <div className="col-lg-4 w1 "><h4 className='fs-1 fw-bold pb-3'>SERVICES</h4></div>
 
-
-                </div>
-
-                <div>
-                    <div className='row'>
-                        <div className='col-lg-6'>
-
-                            <img src={s1} className='simage' alt="" />
-
-                        </div>
-                        <div className='col-lg-6 '>
-                            <div className='ser'>
-                                <div ><h4 className='fs-5 fw-bold'>Building in Sivagiri</h4></div>
-                                <br />
-                                <div>
-                                    building for company  and house
-                                </div>
-                                <br />
-                                <div>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, eaque?
-                                </div>
-                                <div className='btnclass2'>
-                                    <div className='learn'>
-
-                                        <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
-
-                                    </div>
-                                </div>
 
                             </div>
 
+                            <div>
+                                <div className='row'>
+                                    <div className='col-lg-6'>
+
+                                        <img src={s1} className='simage' alt="" />
+
+                                    </div>
+                                    <div className='col-lg-6 '>
+                                        <div className='ser'>
+                                            <div ><h4 className='fs-5 fw-bold'>Building in Sivagiri</h4></div>
+                                            <br />
+                                            <div>
+                                                building for company  and house
+                                            </div>
+                                            <br />
+                                            <div>
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, eaque?
+                                            </div>
+                                            <div className='btnclass2'>
+                                                <div className='learn'>
+
+                                                    <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                         </div>
-
-                    </div>
-                </div>
-
-
-            </div>
                     </Carousel.Item>
 
                     <Carousel.Item>
-                    <div className='works'>
-                <div className='workname'>
-                    <div className="col-lg-4  w "><h4 className='fs-1 fw-bold pb-3 '>OUR CONSTRUCTION</h4></div>
-                    <div className="col-lg-4 w1 "><h4 className='fs-1 fw-bold pb-3'>SERVICES</h4></div>
+                        <div className='works'>
+                            <div className='workname'>
+                                <div className="col-lg-4  w "><h4 className='fs-1 fw-bold pb-3 '>OUR CONSTRUCTION</h4></div>
+                                <div className="col-lg-4 w1 "><h4 className='fs-1 fw-bold pb-3'>SERVICES</h4></div>
 
-
-                </div>
-
-                <div>
-                    <div className='row'>
-                        <div className='col-lg-6'>
-
-                            <img src={s1} className='simage' alt="" />
-
-                        </div>
-                        <div className='col-lg-6 '>
-                            <div className='ser'>
-                                <div ><h4 className='fs-5 fw-bold'>Building in Sivagiri</h4></div>
-                                <br />
-                                <div>
-                                    building for company  and house
-                                </div>
-                                <br />
-                                <div>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, eaque?
-                                </div>
-                                <div className='btnclass2'>
-                                    <div className='learn'>
-
-                                        <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
-
-                                    </div>
-                                </div>
 
                             </div>
 
+                            <div>
+                                <div className='row'>
+                                    <div className='col-lg-6'>
+
+                                        <img src={s1} className='simage' alt="" />
+
+                                    </div>
+                                    <div className='col-lg-6 '>
+                                        <div className='ser'>
+                                            <div ><h4 className='fs-5 fw-bold'>Building in Sivagiri</h4></div>
+                                            <br />
+                                            <div>
+                                                building for company  and house
+                                            </div>
+                                            <br />
+                                            <div>
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, eaque?
+                                            </div>
+                                            <div className='btnclass2'>
+                                                <div className='learn'>
+
+                                                    <div className='fs-1 mb-2 btnarrow'>&rarr;</div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                         </div>
-
-                    </div>
-                </div>
-
-
-            </div>
                     </Carousel.Item>
                 </Carousel>
 
 
+
+            </div>
+
+            <div id='about' className='contact p-5 ' >
+            <h1 className='fw-bold' style={{color:'white',marginLeft:'40%'}} >CONTACT US</h1>
+
+            <div>
+                
+            </div>
+                
 
             </div>
 

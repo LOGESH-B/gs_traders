@@ -2,7 +2,7 @@ import React from 'react'
 import './nav.css'
 import { FaPhoneAlt, FaMailBulk, FaBars,FaTimesCircle } from "react-icons/fa";
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom'
 
 function Nav(props) {
 
@@ -29,9 +29,15 @@ function Nav(props) {
                 </div>
                 <div className=" navcontent" >
                     <div className='content'>
+                        <Link style={{ textDecoration: 'none' }} to="/">
                         <a className='h' style={{ fontSize: 'medium' }}>HOME</a>
-                        <a className='h' style={{ fontSize: 'medium' }}>ABOUT</a>
-                        <a className='h' style={{ fontSize: 'medium' }}>PRODUCTS</a>
+                        </Link>
+                        
+                        <a className='h' href='#about' style={{ fontSize: 'medium' }}>CONTACT</a>
+
+                       
+                        <a className='h' href='#products' style={{ fontSize: 'medium' }}>PRODUCTS</a>
+
 
 
                     </div>
@@ -50,7 +56,7 @@ function Nav(props) {
             {togs ? <div className='dropdown'>
 
                 <li> <a className='h' style={{ fontSize: 'medium' ,color:'white' }}>HOME</a></li>
-                <li> <a className='h' style={{ fontSize: 'medium' ,color:'white' }}>ABOUT</a></li>
+                <li> <a className='h' style={{ fontSize: 'medium' ,color:'white' }}>CONTACT</a></li>
                 <li><a className='h' style={{ fontSize: 'medium' ,color:'white' }}>PRODUCTS</a></li>
                 <li><div className='button1'>
                     <span className='pe-4'>Book Now</span><span className='fs-1 mb-1'>&rarr;</span>

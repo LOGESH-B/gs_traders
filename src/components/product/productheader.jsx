@@ -1,6 +1,6 @@
 import './productheader.css'
 import phead from '../../assets/images/pheader.jpeg'
-export default function Phead(props){
+export default function     Phead(props){
     return(
         <>
         <div style={{backgroundImage: `url(${props.bgimg})`}} className='phead'>
