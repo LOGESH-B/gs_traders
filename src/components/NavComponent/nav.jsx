@@ -2,7 +2,8 @@ import React from 'react'
 import './nav.css'
 import { FaPhoneAlt, FaMailBulk, FaBars,FaTimesCircle } from "react-icons/fa";
 import { useState } from 'react';
-
+import Booking from '../booking/booking';
+import {Link} from 'react-router-dom'
 
 function Nav(props) {
 
@@ -36,9 +37,9 @@ function Nav(props) {
 
                     </div>
 
-                    <div className='button'>
+                    <Link to='booking' style={{textDecoration:'none'}} className='button' onClick={Booking}>
                         <span className='pe-4'>Book Now</span><span className='fs-1 mb-1'>&rarr;</span>
-                    </div>
+                    </Link>
                 </div>
 
                 <div onClick={() => { settogs(!togs) }} className='toggle'>
@@ -52,7 +53,7 @@ function Nav(props) {
                 <li> <a className='h' style={{ fontSize: 'medium' ,color:'white' }}>HOME</a></li>
                 <li> <a className='h' style={{ fontSize: 'medium' ,color:'white' }}>ABOUT</a></li>
                 <li><a className='h' style={{ fontSize: 'medium' ,color:'white' }}>PRODUCTS</a></li>
-                <li><div className='button1'>
+                <li><div className='button1' onClick={Booking}>
                     <span className='pe-4'>Book Now</span><span className='fs-1 mb-1'>&rarr;</span>
                 </div></li>
             </div>

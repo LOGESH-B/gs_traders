@@ -5,6 +5,8 @@ import { store } from './redux/store';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Traders from './pages/products/traders/trader';
+import Booking from './components/booking/booking';
+
 function App() {
   return (
     <Provider store={store}>
@@ -15,8 +17,9 @@ function App() {
 
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<Home/>} />
-            <Route path="trade" element={<Traders/>} />
+          <Route path="/" element={<Home/>} />
+          <Route path="booking" element={<Booking/>} />
+          <Route path="trade" element={<Traders/>} />
         
         </Routes>
       </BrowserRouter>

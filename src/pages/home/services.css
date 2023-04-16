@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+b{
+    font-size: 7vmin;
+    margin-left:25px;
+    color: rgb(254, 146, 22);
+    font-family: 'Merriweather', serif;
+}
+h2{
+    font-family: 'Indie Flower', cursive;
+}
+.sText{
+    text-align: center;
+}
+.counter{
+    display: flex;
+}
+
+.counter-row {
+    display: grid;
+    min-height: 30vmin;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.counter-column {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* border-right: 1px solid #003B46; */
+}
+.counter-column:last-child {
+    border-right: none;
+}
+
+.counter-column .number {
+    display: inline-block;
+   
+    font-weight: 500;
+    font-size: 9vmin;
+    color: #3e8291;
+}
+.number{
+    position: relative;
+  /* Move the element to the right by 50% of the container's width */
+  left: 50%; 
+  /* Calculates 50% of the element's width, and moves it by that */ 
+  /* amount across the X-axis to the left */
+  transform: translateX(-50%);
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+  
+    .counter-row{
+        grid-template-columns: 1fr 1fr;
+    }
+  
+}
+
+@media screen and (max-width: 560px) {
+
+    .counter{
+        padding: 1rem 1rem 2rem 1rem;
+    }
+    .counter-row{
+        grid-template-columns: 1fr;
+    }
+   
+}
