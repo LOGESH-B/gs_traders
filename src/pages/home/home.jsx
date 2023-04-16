@@ -17,9 +17,11 @@ import Carousel from 'react-bootstrap/Carousel';
 import { FaPhoneAlt, FaMailBulk, FaQuoteRight, FaQuoteLeft } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo\'s/GS-logo.png'
-
-
 import './home.css'
+
+import Brands from './brand'
+import Service from './services'
+
 function Home() {
 
     const dispatch = useDispatch();
@@ -252,7 +254,11 @@ if(scrollToTopBtn){
 
             </div>
 
-            <div className='owner1 row'>
+
+            <Brands/>
+            <Service/>
+
+            {/* <div className='owner1 row'>
 
                 <div className='col-lg-6 c1 p-3'>
 
@@ -275,7 +281,7 @@ if(scrollToTopBtn){
 
 
                 </div>
-            </div>
+            </div> */}
 
             <div className='works'>
 

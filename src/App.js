@@ -8,6 +8,8 @@ import Traders from './pages/products/traders/trader';
 import Bluemetal from './pages/products/bluemetal';
 import Bricks from './pages/products/bricks';
 import Construction from './pages/products/construction';
+import Booking from './components/booking/booking';
+
 function App() {
   return (
     <Provider store={store}>
@@ -18,8 +20,9 @@ function App() {
 
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<Home/>} />
-            <Route path="trade" element={<Traders/>} />
+          <Route path="/" element={<Home/>} />
+          <Route path="booking" element={<Booking/>} />
+          <Route path="trade" element={<Traders/>} />
             <Route path="bluemetal" element={<Bluemetal/>} />
             <Route path="bricks" element={<Bricks/>} />
             <Route path="construction" element={<Construction/>} />
