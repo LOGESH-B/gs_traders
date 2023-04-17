@@ -1,0 +1,27 @@
+
+.secondpage{
+    
+    height: 100vh;
+    background-image: url('../../../assets/images/secondpage.webp');   
+    background-repeat: no-repeat;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+    text-align: justify;
+    
+}
+.second1{
+    padding: 100px;
+    margin-right:100px ; 
+    margin-left: 150px;
+
+}
+.second2{
+    
+    margin-right:100px ; 
+    margin-left: 100px;
+
+}

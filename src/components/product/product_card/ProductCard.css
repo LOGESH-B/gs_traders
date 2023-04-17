@@ -3,7 +3,6 @@
 .datacard{
     
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    height: 25vh;
     display: flex;
     border-radius: 25px;
     padding: 1%;
@@ -21,8 +20,9 @@
     padding-top: 2%;
    
 }
-.datacard:hover{
+.datacard:hover {
     border-bottom: 15px solid orange;
+    
     
     cursor: pointer;
 }
@@ -32,9 +32,12 @@
     padding-left: 11%;
     padding-top: 5%;
 }
+.datacard{
+    height: 25vh;
+}
 .productimg{
-    height:100%;
-    width: 50%;
+    height:100px;
+    width: 100%;
    
     
 }

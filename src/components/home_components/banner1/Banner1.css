@@ -1,0 +1,51 @@
+.hero {
+    background-image: url('../../../assets/images/home_bgv.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.cardfront{
+  width: 20%;
+  margin-left: 10%;
+  color: white;
+}
+
+.line{
+  margin-top: 15%;
+}
+
+.helo{
+  font-family: 'Comforter Brush', cursive;
+  font-size: 60px;
+}
+
+.mail{
+  color: black;
+  height: 50px;
+  margin-top: 15%;
+}
+
+.m{
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.m1{
+  background-color: orangered;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.number{
+  border: 2px solid white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  gap: 12px;
+ 
+}

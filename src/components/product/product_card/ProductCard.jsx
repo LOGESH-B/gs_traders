@@ -1,6 +1,6 @@
-import './productdata.css'
-import Modal from "../modal/modal";
-export default function Pdata(props) {
+import './ProductCard.css'
+import Modal from "../../modal/modal";
+export default function ProductCard(props) {
     // const [modalOpen, setModalOpen] = useState(0);
 
     const setModalOpen = (id) => {
@@ -41,7 +41,7 @@ export default function Pdata(props) {
 
 
                         <Modal data={entry} id={entry._id} setCloseModal={setModalClose} />
-
+                        
                     </div>
 
                 ))}

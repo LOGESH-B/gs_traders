@@ -2,7 +2,7 @@
 .phead{
     height: 50vh;
     background-color: black;
-    background-image: url('../../assets/images/pheader.jpeg');
+    background-image: url('../../../assets/images/pheader.jpeg');
 
     background-size: cover;
     background-position: center;

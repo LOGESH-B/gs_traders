@@ -13,11 +13,6 @@ import Booking from './components/booking/booking';
 function App() {
   return (
     <Provider store={store}>
-      {/* <div className="App">
-
-        <Home />
-      </div> */}
-
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>} />

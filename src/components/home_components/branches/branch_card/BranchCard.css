@@ -1,0 +1,30 @@
+.btnclass {
+    background-color: rgb(255, 127, 7);
+    width: 45px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 10%;
+
+}
+
+.learn {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.btnarrow {
+    position: relative;
+    margin-right: 35px;
+
+
+}
+
+.s2 {
+    text-align: justify;
+    border: solid 1px gray;
+    width: 20%;
+}

@@ -1,0 +1,22 @@
+.btnclass2 {
+    background-color: rgb(255, 127, 7);
+    width: 45px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1%;
+
+}
+
+.learn {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.ser {
+    text-align: justify;
+    padding: 5%;
+}

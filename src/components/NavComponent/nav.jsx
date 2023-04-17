@@ -4,7 +4,7 @@ import { FaPhoneAlt, FaMailBulk, FaBars,FaTimesCircle } from "react-icons/fa";
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import Booking from '../booking/booking';
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 function Nav(props) {
 
