@@ -1,0 +1,50 @@
+
+.outerform-modeldiv{
+    background-color: transparent;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    cursor: default;
+  }
+    .modalformContainer {
+    
+      width: 50%;
+      height: 70%;
+      border-radius: 12px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      text-align: center;
+     
+      margin: 10% 25%;
+      opacity:1;
+      visibility:visible;
+  
+  
+  
+    }
+  
+    .modalimg{
+      height: 100%;
+      width: 70%;
+    }
+  
+    .closeformbutton{
+      float: right;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  
+    @media(max-width:800px){
+      .modalformContainer{
+       width: 100%;
+       margin: 0%;
+       margin-top: 20%;
+      }
+    }
+    
+    

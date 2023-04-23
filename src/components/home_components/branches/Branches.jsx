@@ -14,7 +14,8 @@ import img from '../../../assets/images/serviceimg.webp'
 import simg from '../../../assets/logo/GS-logo.png'
 import BranchCard from './branch_card/BranchCard'
 
-const Branches = () => {
+const Branches = (props) => {
+    // console.log(props.data)
     return (
         <div>
             <div id='products' className='services'>

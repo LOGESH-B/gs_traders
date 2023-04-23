@@ -38,8 +38,10 @@
     color: white;
 }
 .button:hover{
-    transform: scale(1);
-    box-shadow: 0px 10px 10px #888888;
+    transform: scale(1.02);
+    /* box-shadow: 0px 10px 10px #888888; */
+    box-shadow: rgba(255, 127, 7, 1) 0px 50px 100px -20px, rgba(255, 127, 7, 1) 0px 30px 60px -30px;
+
     cursor: pointer;
 }
 .navcontent {

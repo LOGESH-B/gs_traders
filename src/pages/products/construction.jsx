@@ -1,6 +1,6 @@
 
 import ProductCard from "../../components/product/product_card/ProductCard"
-import Nav from '../../components/NavComponent/nav'
+import Nav from '../../components/nav_component/Nav'
 import ProductBanner from '../../components/product/product_banner/ProductBanner'
 import bgimg from '../../assets/images/pheader.jpeg'
 import conslogo from '../../assets/logo/GS-logo-construction.png'

@@ -4,11 +4,13 @@ export default function ProductBanner(props){
         <>
         <div style={{backgroundImage: `url(${props.bgimg})`}} className='phead'>
             <div className='row pt-4'>
-                <div className='col-lg-6 headercontent'>
+                <div className='col col-md-8 headercontent'>
                     <h1 className='fw-b' >{props.name}</h1>
                     <h2>YOUR TRUSTED PROVIDER</h2>
                     <h5 className='mt-5'>{props.content}</h5>
-                    <button className='headbtn'>BOOK NOW</button>
+                </div>
+                <div className="col-md-4 text-center d-flex justify-content-center align-items-center">
+                <div className='headbtn '>BOOK NOW</div>
                 </div>
             </div>       
         </div>    

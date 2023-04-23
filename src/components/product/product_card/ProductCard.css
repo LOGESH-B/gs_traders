@@ -3,11 +3,12 @@
 .datacard{
     
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    display: flex;
+    height: 35vh;
     border-radius: 25px;
     padding: 1%;
     
 }
+
 .openModalBtn{
     cursor: pointer;
 
@@ -30,14 +31,20 @@
 .dataheader{
     color: orange;
     padding-left: 11%;
-    padding-top: 5%;
+    margin-top: 5%;
 }
-.datacard{
-    height: 25vh;
+.addbtn{
+    margin-right: 15%;
+    cursor: pointer;
 }
+
 .productimg{
-    height:100px;
-    width: 100%;
+    height:20vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 75%;
+
    
     
 }

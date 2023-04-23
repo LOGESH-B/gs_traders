@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux';
 import './App.css';
-import Home from './pages/home/home';
+import Home from './pages/home/Home';
 import { store } from './redux/store';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";

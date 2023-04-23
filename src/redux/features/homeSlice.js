@@ -2,15 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { featchConstant } from '../api'
 
-const initialState = {
-    companylogo: "",
-    companyName: "",
-    about: "",
-    owner: "",
-    address: "",
-    contact: 0,
-    visitedCount: 0
-}
+const initialState = null
 
 const homeSlice = createSlice({
     name: 'home',
@@ -24,14 +16,14 @@ const homeSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(featchConstant.fulfilled, (state, action) => {
-            console.log("fulfilled");
-            console.log(action.payload);
+            console.log("constant fulfilled");
+            // console.log(action.payload);
             return state = { ...state, ...action.payload };
 
 
         })
         builder.addCase(featchConstant.rejected, (state, action) => {
-            console.log("rejected");
+            console.log("constant rejected");
             console.log(action.error.message);
         })
     }

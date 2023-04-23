@@ -49,3 +49,22 @@
   gap: 12px;
  
 }
+.cardfront>.line>div:hover{
+  /* background: rgb(255,127,7);
+/* background: linear-gradient(90deg, rgba(255,127,7,1) 56%, rgba(0,0,0,0) 100%); */
+/* background: linear-gradient(to left, rgb(255,127,7)50%, rgba(251, 251, 251, 0) 50%) right;
+  transition:  .5s ease-out; */
+/* background: linear-gradient(to right, rgba(255,127,7,1) 56%, rgba(0,0,0,0) 100%); */
+background: linear-gradient(to right, rgb(255,127,7)56%, rgba(251, 251, 251, 0) 100%);
+transition: all 1s ease-out;
+
+  background-position: left bottom;
+    
+  
+}
+.cardfront>.line>div{
+background: transparent;
+  background-size: 200% 100%;
+  background-position: right bottom;
+  cursor: pointer;
+}

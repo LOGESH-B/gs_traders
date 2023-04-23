@@ -1,6 +1,6 @@
 
 .phead{
-    height: 50vh;
+    /* height: 50vh; */
     background-color: black;
     background-image: url('../../../assets/images/pheader.jpeg');
 
@@ -17,8 +17,23 @@
    
 }
 .headbtn{
-    border-radius: 12px;
+    border-radius: 10px;
     height: 50px;
-    margin-top: 5%;
-    box-shadow: none;
+    width: 150PX;
+    padding-top: 10PX;
+    background-color: rgb(255, 127, 7);
+    color: white;
+    cursor: pointer;
+    /* box-shadow: none; */
+}
+.headbtn:hover{
+    /* box-shadow: 10px 10px 10px 5px rgb(255, 127, 7); */
+    transform: scale(1.05);
+    box-shadow: rgba(255, 127, 7, 1) 0px 50px 100px -20px, rgba(255, 127, 7, 1) 0px 30px 60px -30px;
+}
+
+@media (max-width:800px) {
+    .headbtn{
+        display: none;
+    }
 }

@@ -38,7 +38,7 @@ function Service({ className, ...rest })
                 }}
               </CountUp>
               <span className="number">+</span>
-              <div class="text-center mt-3">
+              <div className="text-center mt-3">
                 <img src={transport} className="rounded-circle" style={{height:'150px',width:'200px'}} alt="image"></img>
               </div>
               <h2 className='sText'>vehicle's for free transportation</h2><hr/>
@@ -63,7 +63,7 @@ function Service({ className, ...rest })
                 }}
               </CountUp>
               <span className="number">+</span>
-              <div class="text-center mt-3">
+              <div className="text-center mt-3">
                 <img src={worker} className="rounded-circle" style={{height:'150px',width:'200px'}} alt="image"></img>
               </div>
               <h2 className='sText'>worker's available for our project</h2><hr/>
@@ -88,7 +88,7 @@ function Service({ className, ...rest })
                 }}
               </CountUp>
               <br/>
-              <div class="text-center mt-4">
+              <div className="text-center mt-4">
                 <img src={project} className="rounded" style={{height:'170px',width:'200px'}} alt="image"></img>
               </div>
               <h2 className='sText mt-2'>project's done</h2><hr/>
@@ -97,7 +97,7 @@ function Service({ className, ...rest })
 
           <div className="counter-column">
           <br/>
-              <div class="text-center mt-5">
+              <div className="text-center mt-5">
                 <img src={technical} className="rounded-circle" style={{height:'170px',width:'170px'}} alt="image"></img>
               </div>
               <h2 className='sText'>Provide technical support </h2><hr/>

@@ -4,7 +4,7 @@ import tradelogo from '../../../assets/logo/GS-logo-traders.png'
 import React from 'react';
 import ProductBanner from '../../../components/product/product_banner/ProductBanner';
 import ProductCard from '../../../components/product/product_card/ProductCard'
-import Nav from '../../../components/NavComponent/nav'
+import Nav from '../../../components/nav_component/Nav'
 import bgimg from '../../../assets/images/pheader.jpeg'
 
 export default function Traders() {

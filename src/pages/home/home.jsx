@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
+
+//redux imports
 import { useSelector, useDispatch } from 'react-redux'
-import { featchConstant } from '../../redux/api'
+import { featchConstant, featchCatagory } from '../../redux/api'
 
 
 //components import
-import Nav from '../../components/NavComponent/nav'
+import Nav from '../../components/nav_component/Nav'
 import Banner1 from '../../components/home_components/banner1/Banner1';
 import Banner2 from '../../components/home_components/banner2/Banner2';
 import Branches from '../../components/home_components/branches/Branches.jsx'
@@ -16,28 +18,26 @@ import Brands from './brand'
 import Service from './services'
 
 //css imports
-import './home.css'
+import './Home.css'
 
 //images
 import logo from '../../assets/logo/GS-logo.png'
-
-
-
-
-
-  
-
 
 
 function Home() {
 
     const dispatch = useDispatch();
     const constants = useSelector(state => state.home);
+    const catagory = useSelector(state => state.catagory);
     useEffect(() => {
-        dispatch(featchConstant());
+        var r=!constants?dispatch(featchConstant()):console.log("No C0nstant Api Call");
+        var r1=catagory.length==0? dispatch(featchCatagory()):console.log("No Catagory Api Call");
 
+        // dispatch(featchConstant())
+        // dispatch(featchCatagory())
     }, [])
 
+    //scroll func
     const scrollToTopBtn = document.getElementById("go-to-top-btn");
     if (scrollToTopBtn) {
         window.addEventListener("scroll", () => {
@@ -57,24 +57,29 @@ function Home() {
             });
         });
     }
+    // console.log(constants);
+    // console.log(catagory)
+
+    return constants&&catagory?
+        (
+
+            <div >
+                <Nav img={logo}/>
+                <button id="go-to-top-btn">Go to top</button>
+                <Banner1 branches={constants.branchNames} phn={constants.contact}/>
+                <Banner2 address={constants.address} desc={constants.about}/>
+                <Branches data={catagory}/>
+
+                <Brands />
+                <Service />
+
+                <Construction />
+                <Contact />
 
 
 
-    return (
-        <div >
-            <Nav img={logo} />   
-            <button id="go-to-top-btn">Go to top</button>
-            <Banner1/>
-            <Banner2/>
-            <Branches/>
-            <Construction/>
-            <Contact/>
 
-            {/* <Brands/> */}
-            {/* <Service/> */}
-
-
-            {/* <div className='owner1 row'>
+                {/* <div className='owner1 row'>
 
                 <div className='col-lg-6 c1 p-3'>
 
@@ -150,8 +155,8 @@ function Home() {
 
 
             {constants && <p>{constants.address}</p>} */}
-        </div>
-    )
+            </div>
+        ) : "Loding";
 }
 
 export default Home

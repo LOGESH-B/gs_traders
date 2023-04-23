@@ -1,0 +1,17 @@
+.btnc {
+    background-color: rgb(255, 127, 7);
+    width: 45px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    margin-top: 10%;
+
+}
+
+.arr {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
