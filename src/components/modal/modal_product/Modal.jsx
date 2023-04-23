@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTimesCircle } from "react-icons/fa";
+import { FaTimesCircle, FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
 
 import './Modal.css'
 import { Link } from "react-router-dom";
@@ -10,14 +10,30 @@ function Modal(props) {
 
       <div className="modalContainer" style={{ zIndex: "1" }}>
         <div className="contentmodal">
-          <div className="closebutton pe-3"
-            onClick={() => {
-              props.setCloseModal(props.id);
-            }}
-          >
-            <FaTimesCircle />
-
+          <div>
+            <div className="closebutton pe-3"
+              onClick={() => {
+                props.setCloseModal(props.id);
+              }}
+            >
+              <FaTimesCircle />
+            </div>
+            <div className="closebutton pe-3"
+              onClick={() => {
+                props.setCloseModal(props.id);
+              }}
+            >
+              <FaRegEdit />
+            </div>
+            <div className="closebutton pe-3"
+              onClick={() => {
+                props.setCloseModal(props.id);
+              }}
+            >
+              <FaRegTrashAlt />
+            </div>
           </div>
+
           <div>
             <h3 style={{ color: 'orangered', textTransform: 'uppercase', paddingTop: '2%' }}>{props.data.name}</h3>
           </div>

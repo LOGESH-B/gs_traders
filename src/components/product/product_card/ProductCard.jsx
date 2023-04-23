@@ -13,9 +13,10 @@ export default function ProductCard(props) {
 
     const setModalClose = (id) => {
         document.body.style.overflow = 'visible';
+        document.querySelectorAll("#duplicate").forEach((e) => e.remove())
+        document.getElementById("reset").click()
         var model = document.getElementById(id);
         model.style.display = "none"
-        console.log(model)
     }
 
     return (
@@ -27,7 +28,7 @@ export default function ProductCard(props) {
                 }}>
                     <AddBtn s="40px" clr="rgb(255,127,7)" />
                 </div>
-                <ModalForm id="form_addproduct" name="Add Product" setCloseModal={setModalClose} />
+                <ModalForm from={props.from} id="form_addproduct" category={props.catagory} name="Add Product" setCloseModal={setModalClose} />
 
             </div>
             <div className="row datacards">

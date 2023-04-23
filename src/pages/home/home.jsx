@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 //redux imports
 import { useSelector, useDispatch } from 'react-redux'
-import { featchConstant, featchCatagory } from '../../redux/api'
+import { featchConstant, featchCatagory, featchBranch } from '../../redux/api'
 
 
 //components import
@@ -14,8 +14,8 @@ import Branches from '../../components/home_components/branches/Branches.jsx'
 import Construction from '../../components/home_components/constructions/Construction'
 import Contact from '../../components/home_components/contact/Contact'
 
-import Brands from './brand'
-import Service from './services'
+import Brands from './Brand'
+import Service from './Services'
 
 //css imports
 import './Home.css'
@@ -29,9 +29,11 @@ function Home() {
     const dispatch = useDispatch();
     const constants = useSelector(state => state.home);
     const catagory = useSelector(state => state.catagory);
+    const branch = useSelector(state => state.branch)
     useEffect(() => {
-        var r=!constants?dispatch(featchConstant()):console.log("No C0nstant Api Call");
-        var r1=catagory.length==0? dispatch(featchCatagory()):console.log("No Catagory Api Call");
+        !constants ? dispatch(featchConstant()) : console.log("No C0nstant Api Call");
+        catagory.length == 0 ? dispatch(featchCatagory()) : console.log("No Catagory Api Call");
+        branch.length == 0 ? dispatch(featchBranch()) : console.log("No branch api call");
 
         // dispatch(featchConstant())
         // dispatch(featchCatagory())
@@ -59,16 +61,17 @@ function Home() {
     }
     // console.log(constants);
     // console.log(catagory)
+    // console.log(branch)
 
-    return constants&&catagory?
+    return constants && catagory ?
         (
 
             <div >
-                <Nav img={logo}/>
+                <Nav img={logo} />
                 <button id="go-to-top-btn">Go to top</button>
-                <Banner1 branches={constants.branchNames} phn={constants.contact}/>
-                <Banner2 address={constants.address} desc={constants.about}/>
-                <Branches data={catagory}/>
+                <Banner1 branches={constants.branchNames} phn={constants.contact} />
+                <Banner2 address={constants.address} desc={constants.about} />
+                <Branches data={catagory} />
 
                 <Brands />
                 <Service />

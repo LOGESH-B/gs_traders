@@ -1,4 +1,4 @@
-import './services.css';
+import './Services.css';
 import React, { useState } from "react";
 import CountUp from "react-countup";
 import ReactVisibilitySensor from "react-visibility-sensor";

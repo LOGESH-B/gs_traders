@@ -20,7 +20,6 @@ const homeSlice = createSlice({
             // console.log(action.payload);
             return state = { ...state, ...action.payload };
 
-
         })
         builder.addCase(featchConstant.rejected, (state, action) => {
             console.log("constant rejected");

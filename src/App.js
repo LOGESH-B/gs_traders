@@ -4,11 +4,11 @@ import Home from './pages/home/Home';
 import { store } from './redux/store';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Traders from './pages/products/traders/trader';
-import Bluemetal from './pages/products/bluemetal';
-import Bricks from './pages/products/bricks';
-import Construction from './pages/products/construction';
-import Booking from './components/booking/booking';
+import Traders from './pages/products/traders/Trader';
+import Bluemetal from './pages/products/BlueMetal';
+import Bricks from './pages/products/Bricks';
+import Construction from './pages/products/Construction';
+import Booking from './components/booking/Booking';
 
 function App() {
   return (

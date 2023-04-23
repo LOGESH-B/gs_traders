@@ -8,19 +8,27 @@ const catagorySlice = createSlice({
     name: 'catagory',
     initialState,
     reducers: {
-        catagory: (state) => {
-            console.log("on reducer");
+        getcatagory: (state) => {
 
             // console.log(featchConstant());
+        },
+        setcatagory:(state,action)=>{
+            // console.log("changed")
+            var currstate=JSON.parse(JSON.stringify(state));
+            currstate.map(e=>{
+                if(e.name=="Bricks"){
+                    return e.products.push(action.payload)
+                }
+                return e;
+            })
+            // console.log(currstate);
+            return state = [...currstate]
         }
     },
     extraReducers: (builder) => {
         builder.addCase(featchCatagory.fulfilled, (state, action) => {
             console.log("catagory fulfilled");
-            // console.log(action.payload);
             return state = [...action.payload ];
-
-
         })
         builder.addCase(featchCatagory.rejected, (state, action) => {
             console.log("catagory rejected");
@@ -30,5 +38,5 @@ const catagorySlice = createSlice({
 
 })
 
-export const { constant } = catagorySlice.actions
+export const { getcatagory, setcatagory } = catagorySlice.actions
 export default catagorySlice.reducer

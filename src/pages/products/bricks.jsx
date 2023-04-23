@@ -6,7 +6,7 @@ import bgimg from '../../assets/images/pheader.jpeg'
 import bricklogo from '../../assets/logo/GS-logo-brick.png'
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect, useState } from "react"
-import { featchCatagory } from "../../redux/api"
+import { featchBranch, featchCatagory } from "../../redux/api"
 
 export default function Bricks(){
     const bricks_data=[
@@ -55,16 +55,21 @@ export default function Bricks(){
         ] 
         const dispatch = useDispatch();
         const bricks=useSelector(state=>state.catagory).filter(e=>e.name=='Bricks')[0];
-        !bricks?dispatch(featchCatagory()):console.log("No bricks api call");
+        const branch=useSelector(state=>state.branch).filter(e=>e.name=='GS BRICKS')[0];
+        useEffect(()=>{
+            !bricks?dispatch(featchCatagory()):console.log("No bricks api call");
+            !branch?dispatch(featchBranch()):console.log("No branch api call");
+        },[])
+        // console.log(branch)
 
     return(
-        bricks?
+        bricks&&branch?
         <>
             <Nav img={bricklogo} w={150} />
             {/* <ProductBanner bgimg={bgimg} name={'Bricks'} content={'we are the gs bluemetals we provide high quality bluemetals .we supply all kind of bluemetals'} />
             <ProductCard subproduct={'Bricks'} subproduct2={''} productdata={bricks_data}  /> */}
             <ProductBanner name={bricks.name} bgimg={bgimg} content={bricks.description}/>
-            <ProductCard subproduct={'Bricks'} subproduct2={''} productdata={bricks.products}/>
+            <ProductCard from="bricks" subproduct={'Bricks'} catagory={branch.category} subproduct2={''} productdata={bricks.products}/>
         
 
         </>:"loding"

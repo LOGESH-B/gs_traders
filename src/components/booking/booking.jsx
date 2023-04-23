@@ -1,4 +1,4 @@
-import  './booking.css';
+import  './Booking.css';
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 function Booking(){

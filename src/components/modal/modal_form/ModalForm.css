@@ -8,21 +8,22 @@
     height: 100vh;
     backdrop-filter: blur(8px);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    text-align: center;
+    /* text-align: center; */
     cursor: default;
   }
     .modalformContainer {
     
-      width: 50%;
-      height: 70%;
+      width: 60vw;
+      height: 75%;
+      margin-left: 20vw;
+      margin-top: 12vh;
       border-radius: 12px;
       background-color: white;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      text-align: center;
-     
-      margin: 10% 25%;
       opacity:1;
       visibility:visible;
+      overflow-y: scroll;
+      overflow-x: hidden;
   
   
   
