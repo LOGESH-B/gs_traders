@@ -8,21 +8,23 @@ const branchSlice = createSlice({
     name: 'branch',
     initialState,
     reducers: {
-        getbranch: (state) => {
-           
+        getbranch: (state, action) => {
+            console.log("on branch reducer");
+
+            return state = [...action.payload];
         }
     },
-    extraReducers: (builder) => {
-        builder.addCase(featchBranch.fulfilled, (state, action) => {
-            console.log("branch fulfilled");
-            // console.log(action.payload);
-            return state = [...action.payload ];
-        })
-        builder.addCase(featchBranch.rejected, (state, action) => {
-            console.log("branch rejected");
-            console.log(action.error.message);
-        })
-    }
+    // extraReducers: (builder) => {
+    //     builder.addCase(featchBranch.fulfilled, (state, action) => {
+    //         console.log("branch fulfilled");
+    //         // console.log(action.payload);
+    //         return state = [...action.payload ];
+    //     })
+    //     builder.addCase(featchBranch.rejected, (state, action) => {
+    //         console.log("branch rejected");
+    //         console.log(action.error.message);
+    //     })
+    // }
 
 })
 

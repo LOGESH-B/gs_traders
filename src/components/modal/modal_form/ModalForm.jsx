@@ -1,19 +1,35 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { FaTimesCircle } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 
-import './ModalForm.css'
+//redux
 import { newProduct } from "../../../redux/api";
 import { newproduct, resetproduct } from "../../../redux/features/productSlice";
 import { setcatagory } from "../../../redux/features/catagorySlice";
-import { useNavigate } from "react-router-dom";
+
+//css
+import './ModalForm.css'
+
+
 function ModalForm(props) {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const status = useSelector(state => state.product);
+
+    //api calls func
+    const api = async (obj) => {
+        console.log("New product api call");
+        try {
+            dispatch(newproduct({ type: "API_PENDING" }));
+            const newdata = await newProduct(obj);
+            dispatch(newproduct({ type: "API_SUCCESS", data: newdata }));
+            dispatch(setcatagory({ data: newdata.body, catagory: obj.catagory }));
+        } catch (e) {
+            console.log(e)
+            dispatch(newproduct({ type: "API_ERROR", message: e.message }))
+        }
+    }
     useEffect(() => {
         if (status.success) {
-            dispatch(setcatagory(status.msg));
             // navigate(`/${props.from}`);
             document.getElementById("reset").click()
             props.setCloseModal(props.id);
@@ -21,6 +37,8 @@ function ModalForm(props) {
 
     }, [status])
 
+
+    //dynamic inputs
     const addinput = (ele) => {
         if (ele == "img") {
             const input = document.getElementById(ele);
@@ -43,7 +61,8 @@ function ModalForm(props) {
         }
     }
 
-    const handelSubmit = (e) => {
+    //submit func
+    const handelSubmit = async (e) => {
         e.preventDefault();
         var data = new FormData(e.target);
         dispatch(resetproduct());
@@ -57,7 +76,7 @@ function ModalForm(props) {
             isAvailable: data.get("isavailable"),
             lastUpdate: new Date().toISOString()
         }
-        dispatch(newProduct((obj)));
+        api(obj);
         document.getElementById("reset").click()
         console.log(obj)
     }
@@ -67,7 +86,10 @@ function ModalForm(props) {
         <div className="outerform-modeldiv" id={props.id} style={{ display: "none" }}>
             <div className="modalformContainer" style={{ zIndex: "1" }}>
                 <div className="contentmodalform">
+
+                    {/* api req status */}
                     {status.success ? <h1>Success</h1> : status.pending ? <h1>Pending</h1> : <h1>Error:{status.msg}</h1>}
+
                     <div className="closeformbutton pe-3"
                         onClick={() => {
                             props.setCloseModal(props.id);

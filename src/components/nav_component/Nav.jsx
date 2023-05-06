@@ -8,15 +8,26 @@ import { useDispatch, useSelector } from 'react-redux';
 import { featchConstant } from '../../redux/api';
 // import {Link} from 'react-router-dom'
 
+import {constant} from '../../redux/features/homeSlice'
+
 function Nav(props) {
     const dispatch = useDispatch();
-    const constant = useSelector(state => state.home);
+    const constants = useSelector(state => state.home);
     const [togs, settogs] = useState(false);
-    if (constant == null) {
-        dispatch(featchConstant());
+    const api=async()=>{
+        try{
+            const constant_res=await featchConstant();
+            dispatch(constant(constant_res));
+        }catch(e){
+            console.log(e);
+        }
+
     }
-    var phn = constant?.contact;
-    var email = constant?.email;
+    if (constants == null) {
+        api();
+    }
+    var phn = constants?.contact;
+    var email = constants?.email;
 
 
     return (

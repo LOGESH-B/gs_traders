@@ -1,16 +1,24 @@
+import React from "react"
+import { useEffect, useState } from "react"
 
+//components import
 import ProductCard from "../../components/product/product_card/ProductCard"
 import Nav from '../../components/nav_component/Nav'
 import ProductBanner from '../../components/product/product_banner/ProductBanner'
+
+//images
 import bgimg from '../../assets/images/pheader.jpeg'
 import bricklogo from '../../assets/logo/GS-logo-brick.png'
-import { useDispatch, useSelector } from "react-redux"
-import { useEffect, useState } from "react"
-import { featchBranch, featchCatagory } from "../../redux/api"
 
-export default function Bricks(){
-    const bricks_data=[
-         {
+//redux
+import { useDispatch, useSelector } from "react-redux"
+import { featchBranch, featchCatagory } from "../../redux/api"
+import { getbranch } from "../../redux/features/branchSlice"
+import { getcatagory } from "../../redux/features/catagorySlice"
+
+export default function Bricks() {
+    const bricks_data = [
+        {
             _id: "1",
             bname: 'dalmia1',
             available: 'true',
@@ -52,26 +60,57 @@ export default function Bricks(){
             approxprice: '5000',
             img: bricklogo
         }
-        ] 
-        const dispatch = useDispatch();
-        const bricks=useSelector(state=>state.catagory).filter(e=>e.name=='Bricks')[0];
-        const branch=useSelector(state=>state.branch).filter(e=>e.name=='GS BRICKS')[0];
-        useEffect(()=>{
-            !bricks?dispatch(featchCatagory()):console.log("No bricks api call");
-            !branch?dispatch(featchBranch()):console.log("No branch api call");
-        },[])
-        // console.log(branch)
+    ]
+    const dispatch = useDispatch();
 
-    return(
-        bricks&&branch?
-        <>
-            <Nav img={bricklogo} w={150} />
-            {/* <ProductBanner bgimg={bgimg} name={'Bricks'} content={'we are the gs bluemetals we provide high quality bluemetals .we supply all kind of bluemetals'} />
+    //store
+    const branch = useSelector(state => state.branch).filter(e => e.name == 'GS BRICKS')[0];
+    const catagorydata = useSelector(state => state.catagory);
+
+    const bricks = [];
+    catagorydata && branch?.category.map(ele => {
+        catagorydata.filter(e => {
+            if (e.name == ele.name) {
+                bricks.push(e)
+            }
+        });
+    })
+    console.log(bricks)
+
+    //api calls
+    const apis = async () => {
+        if (!bricks || !branch) {
+            try {
+                const brick_res = await featchCatagory();
+                const branch_res = await featchBranch();
+                console.log("Dispatch called");
+                dispatch(getcatagory(brick_res))
+                dispatch(getbranch((branch_res)))
+                console.log("Dispatch finished");
+
+            } catch (e) {
+                console.log(e.message)
+            }
+        } else {
+            console.log("No Api Calls")
+        }
+
+    }
+    useEffect(() => {
+        apis();
+    }, [])
+    // console.log(branch)
+
+    return (
+        bricks && branch ?
+            <>
+                <Nav img={bricklogo} w={150} />
+                {/* <ProductBanner bgimg={bgimg} name={'Bricks'} content={'we are the gs bluemetals we provide high quality bluemetals .we supply all kind of bluemetals'} />
             <ProductCard subproduct={'Bricks'} subproduct2={''} productdata={bricks_data}  /> */}
-            <ProductBanner name={bricks.name} bgimg={bgimg} content={bricks.description}/>
-            <ProductCard from="bricks" subproduct={'Bricks'} catagory={branch.category} subproduct2={''} productdata={bricks.products}/>
-        
+                <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} />
+                <ProductCard catagory={branch.category}  productdata={bricks} />
 
-        </>:"loding"
+
+            </> : "loding"
     )
 }

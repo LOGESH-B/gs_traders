@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { useState } from 'react'
 
 //redux imports
 import { useSelector, useDispatch } from 'react-redux'
@@ -22,6 +21,9 @@ import './Home.css'
 
 //images
 import logo from '../../assets/logo/GS-logo.png'
+import { constant } from '../../redux/features/homeSlice'
+import { getcatagory } from '../../redux/features/catagorySlice'
+import { getbranch } from '../../redux/features/branchSlice'
 
 
 function Home() {
@@ -30,11 +32,35 @@ function Home() {
     const constants = useSelector(state => state.home);
     const catagory = useSelector(state => state.catagory);
     const branch = useSelector(state => state.branch)
-    useEffect(() => {
-        !constants ? dispatch(featchConstant()) : console.log("No C0nstant Api Call");
-        catagory.length == 0 ? dispatch(featchCatagory()) : console.log("No Catagory Api Call");
-        branch.length == 0 ? dispatch(featchBranch()) : console.log("No branch api call");
+    const apis = async () => {
+        if (!constants || catagory.length === 0 || branch.length === 0) {
+            try {
+                const constant_res = await featchConstant();
+                const catagory_res = await featchCatagory();
+                const branch_res = await featchBranch();
+                console.log("Dispatch called");
+                dispatch(constant(constant_res))
+                dispatch(getcatagory(catagory_res))
+                dispatch(getbranch(branch_res))
+                console.log("Dispatch finished");
 
+            } catch (e) {
+                console.log(e);
+            }
+        } else {
+            console.log("No Api Calls")
+        }
+    }
+    useEffect(() => {
+        apis();
+        // var swiper = new Swiper(".mySwiper", {
+        //     slidesPerView: 6,
+        //     spaceBetween: 30,
+        //     pagination: {
+        //       el: ".swiper-pagination",
+        //       clickable: true,
+        //     },
+        //   });
         // dispatch(featchConstant())
         // dispatch(featchCatagory())
     }, [])
@@ -73,9 +99,24 @@ function Home() {
                 <Banner2 address={constants.address} desc={constants.about} />
                 <Branches data={catagory} />
 
-                <Brands />
+                {/* <Brands /> */}
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" >Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                 
+                <Brands/>
                 <Service />
-
                 <Construction />
                 <Contact />
 

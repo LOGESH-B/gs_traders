@@ -8,24 +8,23 @@ const homeSlice = createSlice({
     name: 'home',
     initialState,
     reducers: {
-        constant: (state) => {
-            console.log("on reducer");
-
-            // console.log(featchConstant());
+        constant: (state, action) => {
+            console.log("on constant reducer");
+            return state = { ...action.payload };
         }
     },
-    extraReducers: (builder) => {
-        builder.addCase(featchConstant.fulfilled, (state, action) => {
-            console.log("constant fulfilled");
-            // console.log(action.payload);
-            return state = { ...state, ...action.payload };
+    // extraReducers: (builder) => {
+    //     builder.addCase(featchConstant.fulfilled, (state, action) => {
+    //         console.log("constant fulfilled");
+    //         // console.log(action.payload);
+    //         return state = { ...state, ...action.payload };
 
-        })
-        builder.addCase(featchConstant.rejected, (state, action) => {
-            console.log("constant rejected");
-            console.log(action.error.message);
-        })
-    }
+    //     })
+    //     builder.addCase(featchConstant.rejected, (state, action) => {
+    //         console.log("constant rejected");
+    //         console.log(action.error.message);
+    //     })
+    // }
 
 })
 

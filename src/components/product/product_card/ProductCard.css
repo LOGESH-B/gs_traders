@@ -60,10 +60,7 @@
 
 
 @media (max-width:700px){
-    .productimg{
-        width: 40%;
-        height: 100%;
-    }
+  
     .datacards{
         padding:6%;
     
