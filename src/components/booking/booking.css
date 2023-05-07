@@ -1,9 +1,78 @@
-.remove Button{
-    height: 2rem;
-    width: 5rem;
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@keyframes color {
+  0%   { background: rgb(147, 32, 142); }
+  40%  { background: rgb(249, 72, 252); }
+  70%  { background: rgb(126, 42, 126); }
+  100%  {background: rgb(169, 32, 108);}
+}
+@keyframes fcolor {
+   
+    0%  { background: orange; } 
+    40%  { background: #f9e46e; }
+    70%  { background: #f8a54c; }
+    100% { background: rgb(251, 127, 3); }
+  }
+  
+.pdata{
+    color: white;
+    background: rgb(230, 147, 243);
+    animation: color 6s infinite linear;
+    border-radius: 10px;
+    width:70%;
+    font-family: 'Castoro Titling', cursive;
+    
+}
+.pform{
+    
+    padding: 5%;
+    width:60vmin;
 }
 
-.add Button{
-    height: 2rem;
-    width: 5rem;
+.productForm{
+    background: rgb(251, 127, 3);
+    animation: fcolor 6s infinite linear;
+    border-radius: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.formcontainer{
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+.qty{
+    width:130%;
+}
+.add{
+    margin: 10px;
+    font-weight:bold;
+}
+.buttons
+{
+    margin-left: 40%;
+}
+
+
+@media (max-width:600px)
+{
+    .formcontainer
+    {
+        display:block;
+        width:70%;
+        margin-left: 14%;
+    }
+    .qty{
+        width:100%;
+    }
+    
+}
+@media(min-width:600px)
+{
+    .add{
+        margin-left: 12%;
+    }
+    .buttons
+    {
+        margin-left: 50%;
+    }
 }
