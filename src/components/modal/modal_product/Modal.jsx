@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { FaTimesCircle, FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
 
@@ -17,6 +17,7 @@ import './Modal.css'
 
 function Modal(props) {
   const dispatch = useDispatch();
+  const navigate=useNavigate();
 
   const deletebtn = async (id) => {
     try {
@@ -33,13 +34,18 @@ function Modal(props) {
 
   }
 
+  const book=()=>{
+    props.setCloseModal(props.id);
+    navigate('/booking')
+  }
   return (
     <>
-      <ModalEditForm from={props.from} data={props.data} id={props.id} setCloseModal={props.setCloseModal} category={props.category} name="Edit Product" setOpenModal={props.setOpenModal} />
+      {props.isadmin && <ModalEditForm from={props.from} data={props.data} id={props.id} setCloseModal={props.setCloseModal} category={props.category} name="Edit Product" setOpenModal={props.setOpenModal} />}
       <div className="outer-modeldiv" id={props.id} style={{ display: "none" }}>
         <div className="modalContainer" style={{ zIndex: "1" }}>
           <div className="contentmodal">
             <div>
+
               <div className="closebutton pe-3"
                 onClick={() => {
                   props.setCloseModal(props.id);
@@ -47,21 +53,25 @@ function Modal(props) {
               >
                 <FaTimesCircle />
               </div>
-              <div className="closebutton pe-3"
-                onClick={() => {
-                  props.setCloseModal(props.id);
-                  props.setOpenModal(props.id + "-edit")
-                }}
-              >
-                <FaRegEdit />
-              </div>
-              <div className="closebutton pe-3"
-                onClick={() => {
-                  deletebtn(props.id)
-                }}
-              >
-                <FaRegTrashAlt />
-              </div>
+              {props.isadmin && <>
+                <div className="closebutton pe-3"
+                  onClick={() => {
+                    props.setCloseModal(props.id);
+                    props.setOpenModal(props.id + "-edit")
+                  }}
+                >
+                  <FaRegEdit />
+                </div>
+
+
+                <div className="closebutton pe-3"
+                  onClick={() => {
+                    deletebtn(props.id)
+                  }}
+                >
+                  <FaRegTrashAlt />
+                </div>
+              </>}
             </div>
 
             <div>
@@ -108,7 +118,7 @@ function Modal(props) {
                 {props.data.description}
               </h5>
             </div>
-            <div className='bookbtn pt-2 mt-3'>BOOK NOW</div>
+            <div className='bookbtn pt-2 mt-3' onClick={book}>BOOK NOW</div>
           </div>
         </div>
       </div>

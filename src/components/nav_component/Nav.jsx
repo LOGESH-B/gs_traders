@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom'
 import Booking from '../booking/booking';
 import { useDispatch, useSelector } from 'react-redux';
 import { featchConstant } from '../../redux/api';
+import logo from  "../../assets/logo/GS-logo.png"
+import { HashLink } from 'react-router-hash-link';
 // import {Link} from 'react-router-dom'
 
 import {constant} from '../../redux/features/homeSlice'
@@ -54,16 +56,16 @@ function Nav(props) {
             </div>
             <div className='nav'>
                 <div className='navcontent1'>
-                    <img style={{ width: props.w }} className='logo' src={props.img} alt={props.img} />
+                    <img style={{ width: props.w }} className='logo' src={props.img?props.img:logo} alt={props.img} />
                 </div>
                 <div className=" navcontent" >
                     <div className='content'>
-                        <Link className='h' style={{ fontSize: 'medium', textDecoration: 'none' }} to="/">HOME</Link>
+                        <HashLink className='h' style={{ fontSize: 'medium', textDecoration: 'none' }} to="/">HOME</HashLink>
 
-                        <Link className='h'  style={{ fontSize: 'medium' }}>CONTACT</Link>
+                        <HashLink className='h' to='/#about' style={{ fontSize: 'medium' }}>CONTACT</HashLink>
 
 
-                        <Link className='h' style={{ fontSize: 'medium' }}>PRODUCTS</Link>
+                        <HashLink className='h' to='/#products' style={{ fontSize: 'medium' }}>PRODUCTS</HashLink>
 
 
 

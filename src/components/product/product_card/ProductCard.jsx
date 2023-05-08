@@ -20,7 +20,7 @@ export default function ProductCard(props) {
     const setModalClose = (id) => {
         document.body.style.overflow = 'visible';
         document.querySelectorAll("#duplicate").forEach((e) => e.remove())
-        document.getElementById("reset").click()
+        document.getElementById("reset") && document.getElementById("reset").click()
         var model = document.getElementById(id);
         model.style.display = "none"
     }
@@ -34,13 +34,13 @@ export default function ProductCard(props) {
                 return <div key={ele._id}>
                     <div className='d-flex justify-content-between align-items-center dataheader'>
                         <h1 id='products' className=" fs-2 fw-bold">{ele.name}</h1>
-                        <div className='addbtn' onClick={() => {
+                        {props.isadmin && <><div className='addbtn' onClick={() => {
                             setModalOpen("form_addproduct");
                         }}>
                             <AddBtn s="40px" clr="rgb(255,127,7)" />
                         </div>
-                        <ModalForm id="form_addproduct" category={props.catagory} name="Add Product" setOpenModal={setModalOpen} setCloseModal={setModalClose} />
-
+                            <ModalForm id="form_addproduct" category={props.catagory} name="Add Product" setOpenModal={setModalOpen} setCloseModal={setModalClose} />
+                        </>}
                     </div>
                     <div className="row datacards">
                         {ele.products.map((entry) => {
@@ -69,7 +69,7 @@ export default function ProductCard(props) {
 
 
 
-                                <Modal from={ele.name} data={entry} id={entry._id} category={props.catagory} setOpenModal={setModalOpen} setCloseModal={setModalClose} />
+                                <Modal isadmin={props.isadmin} from={ele.name} data={entry} id={entry._id} category={props.catagory} setOpenModal={setModalOpen} setCloseModal={setModalClose} />
 
 
                             </div>

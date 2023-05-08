@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useEffect } from "react"
 
 //component imports
@@ -22,6 +22,7 @@ import { getbranch } from "../../redux/features/branchSlice"
 
 
 export default function Bluemetal() {
+    const [admin, setadmin] = useState(false);
     const bluemetal_data = [
         {
             _id: "1",
@@ -86,7 +87,9 @@ export default function Bluemetal() {
 
         apis();
     }, [])
-
+    useEffect(() => {
+        sessionStorage.getItem("isadmin") ? setadmin(true) : setadmin(false);
+    }, [admin]);
 
 
 
@@ -123,7 +126,7 @@ export default function Bluemetal() {
             <ProductCard subproduct={'BLUE METALS'} subproduct2={''} productdata={bluemetal_data}  /> */}
 
                 <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} />
-                <ProductCard catagory={branch.category} productdata={metals} />
+                <ProductCard isadmin={admin}  catagory={branch.category} productdata={metals} />
 
             </> : "loading"
     )

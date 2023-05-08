@@ -31,8 +31,13 @@ export const newProduct = async (data) => {
     const product = await Axios.post("/api/catagory/product/add", (data));
     console.log(product);
     return product?.data
+}
 
-
+export const loginreq = async (data) => {
+    console.log("On api");
+    const user = await Axios.post("/api/admin/login", (data));
+    console.log(user);
+    return user?.data
 }
 
 export const editProduct = async (data) => {
@@ -48,3 +53,10 @@ export const deleteProduct = async (data) => {
     return editproduct?.data
 }
 
+
+export const clientReq = async (data) => {
+
+    const clientres = await Axios.post("/api/sendmail", (data));
+    // console.log(product);
+    return clientres?.data
+}

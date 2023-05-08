@@ -29,12 +29,12 @@ function Brands()
     return( 
         <>
             <br/><br/>
-            <b style={{fontSize:'7vmin',fontFamily:'Merriweather' ,marginLeft:'25px', color:'rgb(251, 3, 143)'}}>Popular Brands </b><br></br><br></br>
+            <h4 className="fw-bold fs-1" style={{marginLeft:'25px', color:'orangered'}}>Popular Brands </h4><br></br><br></br>
             <div className="relative flex items-center">
             <MdChevronLeft onClick={sliderLeft} size={40}  className="opacity-60"/>
                 <div id="slider" className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
                     {images.map((items) => (
-                        <img className="w-[30vmin] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300"
+                        <img className="w-[30vmin] inline-block p-4 cursor-pointer hover:scale-105 ease-in-out duration-300"
                         src={items} alt='brandLogo'
                         />
                     )
@@ -42,7 +42,7 @@ function Brands()
                 </div>
             <MdChevronRight onClick={sliderRight} size={40} className="opacity-60"/>
             </div>
-            <br></br><br></br><br></br><br></br>
+            <br></br><br></br><br></br>
         </>
     )
 }

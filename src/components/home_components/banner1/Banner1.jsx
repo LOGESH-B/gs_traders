@@ -5,10 +5,20 @@ import './Banner1.css'
 
 
 import { FaPhoneAlt } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 const Banner1 = (props) => {
     const [branch, setbranch] = useState(props.branches);
+    const navigate=useNavigate()
     // console.log(branch)
+
+    const navi=(e)=>{
+        if(e=="GS BRICKS"){navigate('/bricks')}
+        else if(e=="GS BLUE METALS"){navigate('/bluemetal')}
+        else if(e=="GS CONSTRUCTION"){navigate('/construction')}
+        else if(e=="GS TRADERS"){navigate('/trade')}
+
+    }
 
     return (
         <div>
@@ -18,7 +28,7 @@ const Banner1 = (props) => {
                     <div className='line'>
                         {branch && branch.map((e, i) => {
                             return <div key={i} >
-                                <div className='d-flex justify-content-around align-items-center'>
+                                <div className='d-flex justify-content-around align-items-center' onClick={()=>navi(e)}>
                                     <h6>{e}</h6><span className='fs-3 ps-3'>&rarr;</span>
                                     
                                 </div>
@@ -33,12 +43,12 @@ const Banner1 = (props) => {
                         <hr /> */}
                     </div>
                     <div className='row mail'>
-                        <div className='col-8 m'>
-                            Enter your Mail
-                        </div>
-                        <div className='col-4 m1'>
+                        <input className='col-8 m '
+                           placeholder= "Enter your Mail"
+                        />
+                        <button className='btn col-4 m1' onClick={()=>navigate('/booking')}>
                             Go Mail
-                        </div>
+                        </button>
                     </div>
 
                     <div style={{ marginLeft: '50%' }}>

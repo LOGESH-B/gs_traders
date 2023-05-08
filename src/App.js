@@ -4,24 +4,26 @@ import Home from './pages/home/home';
 import { store } from './redux/store';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Traders from './pages/products/traders/trader';
-import Bluemetal from './pages/products/bluemetal';
-import Bricks from './pages/products/bricks';
-import Construction from './pages/products/construction';
-import Booking from './components/booking/booking';
+import Traders from './pages/products/traders/Trader';
+import Bluemetal from './pages/products/BlueMetal';
+import Bricks from './pages/products/Bricks';
+import Construction from './pages/products/Construction';
+import Booking from './components/booking/Booking';
+import Login from './pages/login/Login.jsx';
 
 function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="booking" element={<Booking/>} />
-          <Route path="trade" element={<Traders/>} />
-            <Route path="bluemetal" element={<Bluemetal/>} />
-            <Route path="bricks" element={<Bricks/>} />
-            <Route path="construction" element={<Construction/>} />
-        
+          <Route path="/" element={<Home />} />
+          <Route path="booking" element={<Booking />} />
+          <Route path="trade" element={<Traders />} />
+          <Route path="bluemetal" element={<Bluemetal />} />
+          <Route path="bricks" element={<Bricks />} />
+          <Route path="construction" element={<Construction />} />
+          <Route path="admin/login" element={<Login />} />
+
         </Routes>
       </BrowserRouter>
     </Provider>

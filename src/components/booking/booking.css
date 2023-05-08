@@ -1,9 +1,95 @@
-.remove Button{
-    height: 2rem;
-    width: 5rem;
+/* @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@keyframes color {
+  0%   { background: rgb(147, 32, 142); }
+  40%  { background: rgb(249, 72, 252); }
+  70%  { background: rgb(126, 42, 126); }
+  100%  {background: rgb(169, 32, 108);}
+}
+@keyframes fcolor {
+   
+    0%  { background: orange; } 
+    40%  { background: #f9e46e; }
+    70%  { background: #f8a54c; }
+    100% { background: rgb(251, 127, 3); }
+  } */
+.formh {
+    color: orangered;
 }
 
-.add Button{
-    height: 2rem;
-    width: 5rem;
+.pdata {
+    color: black;
+
+    border-radius: 10px;
+
+
+}
+
+.pform {
+
+    padding: 5%;
+
+}
+
+.productForm {
+
+    border-radius: 10px;
+
+}
+
+.formcontainer>.company {
+    width: 25%;
+}
+
+.formcontainer>.quantity {
+    width: 33%;
+}
+
+.formcontainer {
+    /* display: flex; */
+    width: 100%;
+
+
+}
+
+.vr {
+    height: 70vh;
+    padding: 0.5px;
+}
+
+.add {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.subbtn{
+    background-color:rgba(255, 127, 7, 1) ;
+    color: white;
+    width: 150px;
+}
+.add{
+    background-color:rgba(255, 127, 7, 1) ;
+    color: white;
+}
+.add:hover,
+.subbtn:hover{
+    background-color: rgba(255, 127, 7, 1);
+    color: white;
+}
+@media (max-width:600px) {
+    .vr {
+        display: none;
+    }
+
+}
+
+@media(min-width:800px) {
+    .vr {
+        display: inline-block;
+    }
 }
