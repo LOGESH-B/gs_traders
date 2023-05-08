@@ -10,6 +10,12 @@
   margin-left: 10%;
   color: white;
 }
+.btn,.btn:hover{
+  background-color: orangered;
+  color: white;
+  border-radius: 0px 5px 5px 0px;
+}
+
 
 .line{
   margin-top: 15%;

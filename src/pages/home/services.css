@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-b{
-    font-size: 7vmin;
-    margin-left:25px;
-    color: rgb(254, 146, 22);
-    font-family: 'Merriweather', serif;
+
+.service{
+    
+    margin-left: 25px;
+    color: orangered;
 }
 
 .sText{
     text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
+
 }
 .counter{
     display: flex;

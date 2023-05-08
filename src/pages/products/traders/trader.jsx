@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 //components imports
 import ProductBanner from '../../../components/product/product_banner/ProductBanner';
@@ -18,6 +18,7 @@ import { getcatagory } from '../../../redux/features/catagorySlice';
 import { getbranch } from '../../../redux/features/branchSlice';
 
 export default function Traders() {
+    const [admin, setadmin] = useState(false);
 
     const steel_data = [
         {
@@ -147,6 +148,9 @@ export default function Traders() {
     useEffect(() => {
         apis();
     }, [])
+    useEffect(() => {
+        sessionStorage.getItem("isadmin") ? setadmin(true) : setadmin(false);
+    }, [admin]);
     // console.log(branch)
     return (
         cement && branch ? <>
@@ -158,7 +162,7 @@ export default function Traders() {
                 <ProductCard subproduct={'CEMENT'} subproduct2={'STEEL'} productdata={cement_data} productdata2={steel_data} /> */}
 
                 <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} />
-                <ProductCard catagory={branch.category} productdata={cement} />
+                <ProductCard isadmin={admin} catagory={branch.category} productdata={cement} />
 
 
             </div>

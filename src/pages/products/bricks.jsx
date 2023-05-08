@@ -17,6 +17,7 @@ import { getbranch } from "../../redux/features/branchSlice"
 import { getcatagory } from "../../redux/features/catagorySlice"
 
 export default function Bricks() {
+    const [admin, setadmin] = useState(false);
     const bricks_data = [
         {
             _id: "1",
@@ -99,6 +100,9 @@ export default function Bricks() {
     useEffect(() => {
         apis();
     }, [])
+    useEffect(() => {
+        sessionStorage.getItem("isadmin") ? setadmin(true) : setadmin(false);
+    }, [admin]);
     // console.log(branch)
 
     return (
@@ -108,7 +112,7 @@ export default function Bricks() {
                 {/* <ProductBanner bgimg={bgimg} name={'Bricks'} content={'we are the gs bluemetals we provide high quality bluemetals .we supply all kind of bluemetals'} />
             <ProductCard subproduct={'Bricks'} subproduct2={''} productdata={bricks_data}  /> */}
                 <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} />
-                <ProductCard catagory={branch.category}  productdata={bricks} />
+                <ProductCard isadmin={admin} catagory={branch.category}  productdata={bricks} />
 
 
             </> : "loding"

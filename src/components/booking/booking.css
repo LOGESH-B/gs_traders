@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@100&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @keyframes color {
   0%   { background: rgb(147, 32, 142); }
@@ -12,67 +12,84 @@
     40%  { background: #f9e46e; }
     70%  { background: #f8a54c; }
     100% { background: rgb(251, 127, 3); }
-  }
-  
-.pdata{
-    color: white;
-    background: rgb(230, 147, 243);
-    animation: color 6s infinite linear;
-    border-radius: 10px;
-    width:70%;
-    font-family: 'Castoro Titling', cursive;
-    
-}
-.pform{
-    
-    padding: 5%;
-    width:60vmin;
+  } */
+.formh {
+    color: orangered;
 }
 
-.productForm{
-    background: rgb(251, 127, 3);
-    animation: fcolor 6s infinite linear;
+.pdata {
+    color: black;
+
     border-radius: 10px;
-    font-family: 'Josefin Sans', sans-serif;
+
+
 }
-.formcontainer{
+
+.pform {
+
+    padding: 5%;
+
+}
+
+.productForm {
+
+    border-radius: 10px;
+
+}
+
+.formcontainer>.company {
+    width: 25%;
+}
+
+.formcontainer>.quantity {
+    width: 33%;
+}
+
+.formcontainer {
+    /* display: flex; */
+    width: 100%;
+
+
+}
+
+.vr {
+    height: 70vh;
+    padding: 0.5px;
+}
+
+.add {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.buttons {
+    width: 100%;
     display: flex;
-    justify-content:space-evenly;
-    
+    justify-content: center;
 }
-.qty{
-    width:130%;
+.subbtn{
+    background-color:rgba(255, 127, 7, 1) ;
+    color: white;
+    width: 150px;
 }
 .add{
-    margin: 10px;
-    font-weight:bold;
+    background-color:rgba(255, 127, 7, 1) ;
+    color: white;
 }
-.buttons
-{
-    margin-left: 40%;
+.add:hover,
+.subbtn:hover{
+    background-color: rgba(255, 127, 7, 1);
+    color: white;
+}
+@media (max-width:600px) {
+    .vr {
+        display: none;
+    }
+
 }
 
-
-@media (max-width:600px)
-{
-    .formcontainer
-    {
-        display:block;
-        width:70%;
-        margin-left: 14%;
-    }
-    .qty{
-        width:100%;
-    }
-    
-}
-@media(min-width:600px)
-{
-    .add{
-        margin-left: 12%;
-    }
-    .buttons
-    {
-        margin-left: 50%;
+@media(min-width:800px) {
+    .vr {
+        display: inline-block;
     }
 }

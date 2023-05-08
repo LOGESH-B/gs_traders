@@ -1,5 +1,7 @@
+import { useNavigate } from 'react-router-dom'
 import './ProductBanner.css'
 export default function ProductBanner(props){
+    const navigate=useNavigate();
     return(
         <>
         <div style={{backgroundImage: `url(${props.bgimg})`}} className='phead'>
@@ -10,7 +12,7 @@ export default function ProductBanner(props){
                     <h5 className='mt-5'>{props.content}</h5>
                 </div>
                 <div className="col-md-4 text-center d-flex justify-content-center align-items-center">
-                <div className='headbtn '>BOOK NOW</div>
+                <div className='headbtn ' onClick={()=>navigate('/booking')}>BOOK NOW</div>
                 </div>
             </div>       
         </div>    

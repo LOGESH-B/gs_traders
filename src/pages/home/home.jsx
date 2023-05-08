@@ -100,7 +100,7 @@ function Home() {
                 <Branches data={catagory} />
 
                 {/* <Brands /> */}
-                <div class="swiper mySwiper">
+                {/* <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" >Slide 1</div>
                         <div class="swiper-slide">Slide 2</div>
@@ -113,7 +113,7 @@ function Home() {
                         <div class="swiper-slide">Slide 9</div>
                     </div>
                     <div class="swiper-pagination"></div>
-                </div>
+                </div> */}
                  
                 <Brands/>
                 <Service />

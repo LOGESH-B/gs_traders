@@ -1,6 +1,6 @@
 
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Branches.css'
 
 import { Link } from 'react-router-dom'
@@ -16,6 +16,7 @@ import BranchCard from './branch_card/BranchCard'
 
 const Branches = (props) => {
     // console.log(props.data)
+
     return (
         <div>
             <div id='products' className='services'>
