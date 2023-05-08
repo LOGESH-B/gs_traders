@@ -4,7 +4,7 @@ import React from "react";
 import Modal from "../../modal/modal_product/Modal";
 import ModalForm from "../../modal/modal_form/ModalForm";
 import AddBtn from '../../add_btn/AddBtn';
-
+import Back from "../../back_to_top_btn/back_to_top";
 //css
 import './ProductCard.css'
 
@@ -28,6 +28,7 @@ export default function ProductCard(props) {
 
     return (
         <>
+         <Back/>
             {props.productdata.map(ele => {
                 { console.log(ele.name); }
                 return <div key={ele._id}>

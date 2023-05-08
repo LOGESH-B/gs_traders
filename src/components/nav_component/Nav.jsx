@@ -3,7 +3,7 @@ import './Nav.css'
 import { FaPhoneAlt, FaMailBulk, FaBars, FaTimesCircle } from "react-icons/fa";
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
-import Booking from '../booking/Booking';
+import Booking from '../booking/booking';
 import { useDispatch, useSelector } from 'react-redux';
 import { featchConstant } from '../../redux/api';
 // import {Link} from 'react-router-dom'
@@ -28,8 +28,18 @@ function Nav(props) {
     }
     var phn = constants?.contact;
     var email = constants?.email;
+// useEffect(()=>{
+//     document.addEventListener("mousedown", (e)=> {
+//        if(!menuRef.current.contains(e.target)){
+//         settogs(false);
 
-
+//        }
+   
+        
+//    }
+//    ,false);
+// })
+    
     return (
         <>
 
@@ -50,10 +60,10 @@ function Nav(props) {
                     <div className='content'>
                         <Link className='h' style={{ fontSize: 'medium', textDecoration: 'none' }} to="/">HOME</Link>
 
-                        <Link className='h' to='#about' style={{ fontSize: 'medium' }}>CONTACT</Link>
+                        <Link className='h'  style={{ fontSize: 'medium' }}>CONTACT</Link>
 
 
-                        <Link className='h' to='#products' style={{ fontSize: 'medium' }}>PRODUCTS</Link>
+                        <Link className='h' style={{ fontSize: 'medium' }}>PRODUCTS</Link>
 
 
 
@@ -64,7 +74,7 @@ function Nav(props) {
                     </Link>
                 </div>
 
-                <div onClick={() => { settogs(!togs) }} className='toggle'>
+                <div id='tog' onClick={() => { settogs(!togs) }} className='toggle'>
                     {togs ? <FaTimesCircle /> : <FaBars />}
 
 

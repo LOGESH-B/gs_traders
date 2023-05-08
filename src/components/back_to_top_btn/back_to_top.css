@@ -1,0 +1,38 @@
+
+.block-button-1 {
+    text-align: center;
+    border-radius: 35px;
+    color: white;
+    font-size: 21px;
+    border: none;
+    height: 50px;
+    width: 50px;
+    background-color: #f18a14;
+    border-color: #bbdcff;
+    box-shadow: 0px 0 15px #bbdcff;
+    margin: 24px 0 0 -130px;
+    animation: updown 2s ease infinite;
+}
+.go-to-top-btn {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
+
+
+@keyframes updown {
+    0% {
+      transform: translateY(-25%);
+    }
+  
+    50% {
+      transform: translateY(25%);
+    }
+  
+    100% {
+      transform: translateY(-20%);
+    }
+  }

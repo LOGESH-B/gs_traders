@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
 
-#go-to-top-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-}
+
 
 .ownerimage {
   height: 100%;

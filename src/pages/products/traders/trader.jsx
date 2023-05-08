@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import ProductBanner from '../../../components/product/product_banner/ProductBanner';
 import ProductCard from '../../../components/product/product_card/ProductCard'
 import Nav from '../../../components/nav_component/Nav'
+import Back from '../../../components/back_to_top_btn/back_to_top';
 
 //images
 import bgimg from '../../../assets/images/pheader.jpeg'
@@ -149,7 +150,10 @@ export default function Traders() {
     }, [])
     // console.log(branch)
     return (
+
         cement && branch ? <>
+
+         
 
 
             <div className='modalback'>

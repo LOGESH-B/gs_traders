@@ -5,27 +5,34 @@ import ProductBanner from '../../components/product/product_banner/ProductBanner
 import bgimg from '../../assets/images/pheader.jpeg'
 import conslogo from '../../assets/logo/GS-logo-construction.png'
 import { useEffect } from "react"
-
+import './construction.css'
 
 export default function Construction() {
     const construction_data = [
         {
             _id: "1",
+            title: "",
             img: '',
             location: '',
-            price: ''
+            service: '',
+            price: '',
+
         },
         {
             _id: "2",
-            img: ' ',
+            title: "",
+            img: '',
             location: '',
+            service: '',
             price: ''
         },
         {
             _id: "3",
+            title: "",
             img: '',
             location: '',
-            price: ''
+            service: '',
+            price: '',
         }]
 
     useEffect(() => {
@@ -38,7 +45,7 @@ export default function Construction() {
             <Nav img={conslogo} w={150} />
             <ProductBanner bgimg={bgimg} name={'Construction'} content={'we are the gs bluemetals we provide high quality bluemetals .we supply all kind of bluemetals'} />
 
-            <div >
+            {/* <div >
                 <ul>
                     <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
                     <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
@@ -52,6 +59,45 @@ export default function Construction() {
                     <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
                     <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
                 </ul>
+            </div> */}
+
+
+
+            <div>
+
+                {construction_data.map((entry) => (
+
+                    <div className="construction">
+                        <div className="row">
+
+                            <div className="col-lg-3">
+                                <img className="conimg" src="https://media1.popsugar-assets.com/files/thumbor/mAVULQjJtIDsyVj7A9sj53zQ0uU/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2018/02/21/912/n/29590734/42eba984fc82543f_GettyImages-922246082_master/i/Anne-Marie.jpg" alt="" />
+
+
+                            </div>
+                            <div className="col-lg-6 p-4">
+
+                                <div>
+                                    <h1 className="fw-b" style={{ color: 'orangered' }}>Commercial Building </h1>
+
+                                </div>
+                                <div className="pt-3 ">
+                                    <ul>
+                                        <li><h5>location</h5></li>
+                                        <li><h5>Price</h5></li>
+                                        <li><h5>service</h5></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                ))
+                }
+
             </div>
 
         </>

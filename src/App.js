@@ -1,14 +1,14 @@
 import { Provider } from 'react-redux';
 import './App.css';
-import Home from './pages/home/Home';
+import Home from './pages/home/home';
 import { store } from './redux/store';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Traders from './pages/products/traders/Trader';
-import Bluemetal from './pages/products/BlueMetal';
-import Bricks from './pages/products/Bricks';
-import Construction from './pages/products/Construction';
-import Booking from './components/booking/Booking';
+import Traders from './pages/products/traders/trader';
+import Bluemetal from './pages/products/bluemetal';
+import Bricks from './pages/products/bricks';
+import Construction from './pages/products/construction';
+import Booking from './components/booking/booking';
 
 function App() {
   return (

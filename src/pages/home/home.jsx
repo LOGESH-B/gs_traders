@@ -12,18 +12,20 @@ import Banner2 from '../../components/home_components/banner2/Banner2';
 import Branches from '../../components/home_components/branches/Branches.jsx'
 import Construction from '../../components/home_components/constructions/Construction'
 import Contact from '../../components/home_components/contact/Contact'
-
-import Brands from './Brand'
-import Service from './Services'
+import Loading from '../../components/Loading/loading';
+import Brands from './brand'
+import Service from './services'
 
 //css imports
-import './Home.css'
+import './home.css'
 
 //images
 import logo from '../../assets/logo/GS-logo.png'
 import { constant } from '../../redux/features/homeSlice'
 import { getcatagory } from '../../redux/features/catagorySlice'
 import { getbranch } from '../../redux/features/branchSlice'
+import Back from '../../components/back_to_top_btn/back_to_top';
+
 
 
 function Home() {
@@ -65,36 +67,16 @@ function Home() {
         // dispatch(featchCatagory())
     }, [])
 
-    //scroll func
-    const scrollToTopBtn = document.getElementById("go-to-top-btn");
-    if (scrollToTopBtn) {
-        window.addEventListener("scroll", () => {
-            // If user scrolls more than 20px from top, show the button
-            if (window.pageYOffset > 20) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        });
-
-
-        scrollToTopBtn.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    }
+   
     // console.log(constants);
     // console.log(catagory)
     // console.log(branch)
 
     return constants && catagory ?
         (
-
-            <div >
+            <div>
+                  <Back/>
                 <Nav img={logo} />
-                <button id="go-to-top-btn">Go to top</button>
                 <Banner1 branches={constants.branchNames} phn={constants.contact} />
                 <Banner2 address={constants.address} desc={constants.about} />
                 <Branches data={catagory} />
@@ -119,7 +101,7 @@ function Home() {
                 <Service />
                 <Construction />
                 <Contact />
-
+                
 
 
 
@@ -197,11 +179,13 @@ function Home() {
 
 
 
-
             {constants && <p>{constants.address}</p>} */}
+            
+
             </div>
-        ) : "Loding";
-}
+            
+        ) : <Loading/>
+    }
 
 export default Home
 
