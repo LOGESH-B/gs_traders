@@ -3,7 +3,7 @@ import './Nav.css'
 import { FaPhoneAlt, FaMailBulk, FaBars, FaTimesCircle } from "react-icons/fa";
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
-import Booking from '../booking/booking';
+import Booking from '../booking/Booking';
 import { useDispatch, useSelector } from 'react-redux';
 import { featchConstant } from '../../redux/api';
 import logo from  "../../assets/logo/GS-logo.png"

@@ -5,11 +5,11 @@ import { store } from './redux/store';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Traders from './pages/products/traders/Trader';
-import Bluemetal from './pages/products/BlueMetal';
+import Bluemetal from './pages/products/Bluemetal';
 import Bricks from './pages/products/Bricks';
 import Construction from './pages/products/Construction';
 import Booking from './components/booking/Booking';
-import Login from './pages/login/Login.jsx';
+import Login from './pages/login/Login'
 
 function App() {
   return (

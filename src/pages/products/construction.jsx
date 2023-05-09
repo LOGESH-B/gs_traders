@@ -6,7 +6,6 @@ import bgimg from '../../assets/images/pheader.jpeg'
 import conslogo from '../../assets/logo/GS-logo-construction.png'
 import { useEffect } from "react"
 import './construction.css'
-
 export default function Construction() {
     const construction_data = [
         {
@@ -81,12 +80,56 @@ export default function Construction() {
                                     <h1 className="fw-b" style={{ color: 'orangered' }}>Commercial Building </h1>
 
                                 </div>
-                                <div className="pt-3 ">
-                                    <ul>
-                                        <li><h5>location</h5></li>
-                                        <li><h5>Price</h5></li>
-                                        <li><h5>service</h5></li>
-                                    </ul>
+                                <div className="pt-3 data">
+                                    <table>
+                                        <tr>
+                                           
+                                            <td>
+                                                <h5 className="datas">Location</h5>
+
+                                            </td>
+                                            <td>
+                                            <h5 className="datas">:</h5>
+                                                
+                                            </td>
+                                            <td>
+                                            <h5 className="datas">erode</h5>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <h5 className="datas">Price</h5>
+
+                                            </td>
+                                            <td>
+                                            <h5 className="datas">:</h5>
+
+                                            </td>
+                                            <td>
+                                            <h5 className="datas">19,00,000</h5>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <h5 className="datas">Service</h5>
+
+                                            </td>
+                                            <td>
+                                            <h5 className="datas">:</h5>
+
+                                            </td>
+                                            <td>
+                                            <h5 className="datas">Home Service</h5>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+
+
                                 </div>
 
                             </div>

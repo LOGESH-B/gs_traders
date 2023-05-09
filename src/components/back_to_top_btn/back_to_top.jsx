@@ -4,7 +4,7 @@ export default function Back() {
     if (scrollToTopBtn) {
         window.addEventListener("scroll", () => {
             // If user scrolls more than 20px from top, show the button
-            if (window.pageYOffset > 20) {
+            if (window.pageYOffset >20) {
                 scrollToTopBtn.style.display = "block";
             } else {
                 scrollToTopBtn.style.display = "none";

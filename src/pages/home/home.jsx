@@ -11,10 +11,9 @@ import Banner1 from '../../components/home_components/banner1/Banner1';
 import Banner2 from '../../components/home_components/banner2/Banner2';
 import Branches from '../../components/home_components/branches/Branches.jsx'
 import Construction from '../../components/home_components/constructions/Construction'
-import Contact from '../../components/home_components/contact/Contact'
 import Loading from '../../components/Loading/loading';
-import Brands from './brand'
-import Service from './services'
+import Brands from './Brand'
+import Service from './Services'
 
 //css imports
 import './home.css'
@@ -25,6 +24,7 @@ import { constant } from '../../redux/features/homeSlice'
 import { getcatagory } from '../../redux/features/catagorySlice'
 import { getbranch } from '../../redux/features/branchSlice'
 import Back from '../../components/back_to_top_btn/back_to_top';
+import Contact from '../../components/Contact/Contact';
 
 
 
@@ -100,7 +100,8 @@ function Home() {
                 <Brands/>
                 <Service />
                 <Construction />
-                <Contact />
+                <Contact/>
+                
                 
 
 

@@ -1,4 +1,4 @@
-import './services.css';
+import './Services.css';
 import React, { useState } from "react";
 import CountUp from "react-countup";
 import ReactVisibilitySensor from "react-visibility-sensor";
@@ -16,7 +16,7 @@ function Service({ className, ...rest })
   return (
     <>
 
-      <h4 className='fw-bold fs-1 service'>Service</h4>
+      <h4 className='fw-bold fs-1 service'>SERVICES</h4>
       <section className="counter">
         <div className="counter-row">
           <div className="counter-column">
