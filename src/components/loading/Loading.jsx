@@ -10,5 +10,4 @@ export default function Loading(){
            <h4 className='load'>Loading...</h4>
         </div>
  )
-    
 }
