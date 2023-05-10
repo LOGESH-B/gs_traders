@@ -5,7 +5,7 @@ import ProductBanner from '../../components/product/product_banner/ProductBanner
 import bgimg from '../../assets/images/pheader.jpeg'
 import conslogo from '../../assets/logo/GS-logo-construction.png'
 import { useEffect } from "react"
-import './construction.css'
+import './Construction.css'
 export default function Construction() {
     const construction_data = [
         {

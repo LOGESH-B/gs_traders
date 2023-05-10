@@ -11,12 +11,12 @@ import Banner1 from '../../components/home_components/banner1/Banner1';
 import Banner2 from '../../components/home_components/banner2/Banner2';
 import Branches from '../../components/home_components/branches/Branches.jsx'
 import Construction from '../../components/home_components/constructions/Construction'
-import Loading from '../../components/Loading/loading';
+import Loading from '../../components/loading/Loading';
 import Brands from './Brand'
 import Service from './Services'
 
 //css imports
-import './home.css'
+import './Home.css'
 
 //images
 import logo from '../../assets/logo/GS-logo.png'

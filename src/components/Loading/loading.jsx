@@ -1,5 +1,5 @@
 
-import './loading.css'
+import './Loading.css'
 import loadimg from '../../assets/images/loading.gif'
 export default function Loading(){
  return(
