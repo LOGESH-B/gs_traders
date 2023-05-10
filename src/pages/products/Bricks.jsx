@@ -1,107 +1,91 @@
-import React, { useState } from "react"
-import { useEffect } from "react"
+import React from "react"
+import { useEffect, useState } from "react"
 
-//component imports
+//components import
 import ProductCard from "../../components/product/product_card/ProductCard"
 import Nav from '../../components/nav_component/Nav'
 import ProductBanner from '../../components/product/product_banner/ProductBanner'
 
 //images
-import bluelogo from '../../assets/logo/GS-logo-metal.png'
 import bgimg from '../../assets/images/pheader.jpeg'
-
+import bricklogo from '../../assets/logo/GS-logo-brick.png'
 
 //redux
 import { useDispatch, useSelector } from "react-redux"
 import { featchBranch, featchCatagory } from "../../redux/api"
-import { getcatagory } from "../../redux/features/catagorySlice"
 import { getbranch } from "../../redux/features/branchSlice"
+import { getcatagory } from "../../redux/features/catagorySlice"
 
-
-
-
-
-export default function Bluemetal() {
+export default function Bricks() {
     const [admin, setadmin] = useState(false);
-    const bluemetal_data = [
+    const bricks_data = [
         {
             _id: "1",
             bname: 'dalmia1',
             available: 'true',
             approxprice: '5000',
-            img: bluelogo
+            img: bricklogo
         },
         {
             _id: "2",
             bname: 'dalmia2',
             available: 'true',
             approxprice: '5000',
-            img: bluelogo
+            img: bricklogo
         },
         {
             _id: "3",
             bname: 'dalmia3',
             available: 'true',
             approxprice: '5000',
-            img: bluelogo
+            img: bricklogo
         },
         {
             _id: "4",
             bname: 'dalmia4',
             available: 'true',
             approxprice: '5000',
-            img: bluelogo
+            img: bricklogo
         },
         {
             _id: "5",
             bname: 'dalmia5',
             available: 'true',
             approxprice: '5000',
-            img: bluelogo
+            img: bricklogo
         },
         {
             _id: "6",
             bname: 'dalmia6',
             available: 'true',
             approxprice: '5000',
-            img: bluelogo
+            img: bricklogo
         }
     ]
     const dispatch = useDispatch();
 
     //store
-    const branch = useSelector(state => state.branch).filter(e => e.name == 'GS BLUE METALS')[0];
+    const branch = useSelector(state => state.branch).filter(e => e.name == 'GS BRICKS')[0];
     const catagorydata = useSelector(state => state.catagory);
-    const metals = [];
+
+    const bricks = [];
     catagorydata && branch?.category.map(ele => {
         catagorydata.filter(e => {
             if (e.name == ele.name) {
-                metals.push(e)
+                bricks.push(e)
             }
         });
     })
-    console.log(metals)
-
-
-    useEffect(() => {
-
-        apis();
-    }, [])
-    useEffect(() => {
-        sessionStorage.getItem("isadmin") ? setadmin(true) : setadmin(false);
-    }, [admin]);
-
-
+    console.log(bricks)
 
     //api calls
     const apis = async () => {
-        console.log("on api")
-        if (!metals || !branch) {
+        if (!bricks || !branch) {
             try {
-                const metals_res = await featchCatagory();
+                const brick_res = await featchCatagory();
                 const branch_res = await featchBranch();
                 console.log("Dispatch called");
-                dispatch(getcatagory(metals_res))
+                dispatch(getcatagory(brick_res))
                 dispatch(getbranch((branch_res)))
                 console.log("Dispatch finished");
 
@@ -112,22 +96,25 @@ export default function Bluemetal() {
             console.log("No Api Calls")
         }
 
-
     }
-
-
+    useEffect(() => {
+        apis();
+    }, [])
+    useEffect(() => {
+        sessionStorage.getItem("isadmin") ? setadmin(true) : setadmin(false);
+    }, [admin]);
+    // console.log(branch)
 
     return (
-        metals && branch ?
+        bricks && branch ?
             <>
-
-                <Nav img={bluelogo} w={150} />
-                {/* <ProductBanner bgimg={bgimg} name={'GS BLUE METALS'} content={'we are the gs bluemetals we provide high quality bluemetals .we supply all kind of bluemetals'} />
-            <ProductCard subproduct={'BLUE METALS'} subproduct2={''} productdata={bluemetal_data}  /> */}
-
+                <Nav img={bricklogo} w={150} />
+                {/* <ProductBanner bgimg={bgimg} name={'Bricks'} content={'we are the gs bluemetals we provide high quality bluemetals .we supply all kind of bluemetals'} />
+            <ProductCard subproduct={'Bricks'} subproduct2={''} productdata={bricks_data}  /> */}
                 <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} />
-                <ProductCard isadmin={admin}  catagory={branch.category} productdata={metals} />
+                <ProductCard isadmin={admin} catagory={branch.category}  productdata={bricks} />
 
-            </> : "loading"
+
+            </> : "loding"
     )
 }
