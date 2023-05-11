@@ -88,7 +88,7 @@ function ModalForm(props) {
                 <div className="contentmodalform">
 
                     {/* api req status */}
-                    {status.success ? <h1>Success</h1> : status.pending ? <h1>Pending</h1> : <h1>Error:{status.msg}</h1>}
+                    {/* {status.success ? <h1>Success</h1> : status.pending ? <h1>Pending</h1> : <h1>Error:{status.msg}</h1>} */}
 
                     <div className="closeformbutton pe-3"
                         onClick={() => {

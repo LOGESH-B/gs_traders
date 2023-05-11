@@ -1,148 +1,82 @@
-
-import ProductCard from "../../components/product/product_card/ProductCard"
+import './Construction.css'
 import Nav from '../../components/nav_component/Nav'
 import ProductBanner from '../../components/product/product_banner/ProductBanner'
 import bgimg from '../../assets/images/pheader.jpeg'
 import conslogo from '../../assets/logo/GS-logo-construction.png'
-import { useEffect } from "react"
-import './Construction.css'
-export default function Construction() {
-    const construction_data = [
-        {
-            _id: "1",
-            title: "",
-            img: '',
-            location: '',
-            service: '',
-            price: '',
-
-        },
-        {
-            _id: "2",
-            title: "",
-            img: '',
-            location: '',
-            service: '',
-            price: ''
-        },
-        {
-            _id: "3",
-            title: "",
-            img: '',
-            location: '',
-            service: '',
-            price: '',
-        }]
-
-    useEffect(() => {
-        // document.getElementsByClassName("flipster").flipster();
-    })
-    return (
-
-        <>
-
-            <Nav img={conslogo} w={150} />
-            <ProductBanner bgimg={bgimg} name={'Construction'} content={'we are the gs bluemetals we provide high quality bluemetals .we supply all kind of bluemetals'} />
-
-            {/* <div >
-                <ul>
-                    <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
-                    <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
-                    <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
-                    <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
-                    <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
-                    <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
-                    <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
-                    <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
-                    <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
-                    <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
-                    <li><img src="http://localhost:3000/static/media/GS-logo-brick.83a652b3c7c632e6dd8e.png" alt="no img" /></li>
-                </ul>
-            </div> */}
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-            <div>
-
-                {construction_data.map((entry) => (
-
-                    <div className="construction">
-                        <div className="row">
-
-                            <div className="col-lg-3">
-                                <img className="conimg" src="https://media1.popsugar-assets.com/files/thumbor/mAVULQjJtIDsyVj7A9sj53zQ0uU/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2018/02/21/912/n/29590734/42eba984fc82543f_GettyImages-922246082_master/i/Anne-Marie.jpg" alt="" />
+import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 
 
-                            </div>
-                            <div className="col-lg-6 p-4">
+function Construction() {
+  const slideImages = [
+   
+   
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk2mfGt4AV9awKbbbaCGDx-yYAmESWHP7IJFhjss82rWyWntvXnpqCdKJKjZGhHDRCGT0&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRKzct9T4TI4gLAKiJQpb-T_Dvuu_jDYNwsviCEKQ_6_wl8CmED1U6sk4t4C-5T3O6Hso&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk2mfGt4AV9awKbbbaCGDx-yYAmESWHP7IJFhjss82rWyWntvXnpqCdKJKjZGhHDRCGT0&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk2mfGt4AV9awKbbbaCGDx-yYAmESWHP7IJFhjss82rWyWntvXnpqCdKJKjZGhHDRCGT0&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRKzct9T4TI4gLAKiJQpb-T_Dvuu_jDYNwsviCEKQ_6_wl8CmED1U6sk4t4C-5T3O6Hso&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk2mfGt4AV9awKbbbaCGDx-yYAmESWHP7IJFhjss82rWyWntvXnpqCdKJKjZGhHDRCGT0&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRKzct9T4TI4gLAKiJQpb-T_Dvuu_jDYNwsviCEKQ_6_wl8CmED1U6sk4t4C-5T3O6Hso&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk2mfGt4AV9awKbbbaCGDx-yYAmESWHP7IJFhjss82rWyWntvXnpqCdKJKjZGhHDRCGT0&usqp=CAU",
 
-                                <div>
-                                    <h1 className="fw-b" style={{ color: 'orangered' }}>Commercial Building </h1>
-
-                                </div>
-                                <div className="pt-3 data">
-                                    <table>
-                                        <tr>
-                                           
-                                            <td>
-                                                <h5 className="datas">Location</h5>
-
-                                            </td>
-                                            <td>
-                                            <h5 className="datas">:</h5>
-                                                
-                                            </td>
-                                            <td>
-                                            <h5 className="datas">erode</h5>
-
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <h5 className="datas">Price</h5>
-
-                                            </td>
-                                            <td>
-                                            <h5 className="datas">:</h5>
-
-                                            </td>
-                                            <td>
-                                            <h5 className="datas">19,00,000</h5>
-
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <h5 className="datas">Service</h5>
-
-                                            </td>
-                                            <td>
-                                            <h5 className="datas">:</h5>
-
-                                            </td>
-                                            <td>
-                                            <h5 className="datas">Home Service</h5>
-
-                                            </td>
-                                        </tr>
-                                    </table>
+  ];
 
 
-                                </div>
+  return (
+    <>
+      <Nav />
+      <ProductBanner />
+      <div className="swiper-container">
+        <Swiper
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={'auto'}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          pagination={{ el: '.swiper-pagination', clickable: true }}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            clickable: true,
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="swiper_container"
+        >
+          {slideImages.map((image, index) => (
+            <SwiperSlide key={index}>
+              <img src={image} alt="slide_image" />
+            </SwiperSlide>
+          ))}
 
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                ))
-                }
-
+          <div className="slider-controler">
+            <div className="swiper-button-prev slider-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <br/>
+              <center className="swiper-pagination"></center>
+            <div className="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
             </div>
 
-        </>
-    )
+          </div>
+        </Swiper>
+      </div>
+    </>
+  );
 }
+
+export default Construction;
