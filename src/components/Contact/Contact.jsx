@@ -7,10 +7,10 @@ import brick from '../../assets/logo/GS-logo-brick.png'
 export default function Contact() {
     return (
         <>
-            <hr />
+            <hr className='w-75 mx-auto' />
             <session className="mt-5" id='about'>
 
-                <div className='row mt-5 mb-5'>
+                {/* <div className='row mt-5 mb-5'>
                     <div className='col-lg-4 ' style={{ textAlign: 'center', color: 'orangered' }} >
                         <h1 className='fw-bold '>CONTACT US</h1>
 
@@ -43,9 +43,11 @@ export default function Contact() {
 
                     </div>
 
+                </div> */}
+             
+                <div className='text-center fw-bold ' style={{letterSpacing:"1px"}}>
+                    <p>All Rights Reserved @ GS Groups</p>
                 </div>
-
-                <br/>
 
             </session>
         </>
