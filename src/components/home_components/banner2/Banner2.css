@@ -11,12 +11,14 @@
     align-items: center;
     color: beige;
     text-align: justify;
+    width: 100vw;
     
 }
 .second1{
-    padding: 100px;
+    padding: 50px;
     margin-right:100px ;    
     margin-left: 150px;
+    overflow-x: hidden;
 
 }
 .second2{
@@ -24,5 +26,6 @@
     margin-right:100px ; 
     margin-left: 100px;
     text-align: center;
+    overflow-x: hidden;
 
 }

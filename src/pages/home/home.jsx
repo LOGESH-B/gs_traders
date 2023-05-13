@@ -100,7 +100,7 @@ function Home() {
                 <Brands/>
                 <Service />
                 <Construction />
-                <Contact/>
+                {/* <Contact/> */}
                 
                 
 

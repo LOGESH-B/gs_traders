@@ -8,7 +8,7 @@ const Banner2 = (props) => {
     <div>
         <div className='secondpage'>
                 <div className='row'>
-                    <div className='col-lg-4 second1'>
+                    <div className='col-lg-4  second1'>
                         <div className='fw-bold '>{props.address}</div>
                         <div className='btnclass1'>
                             <div className='learn'>
@@ -16,7 +16,7 @@ const Banner2 = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-4 second2 p-5'>
+                    <div className='col-lg-4 second2 '>
                         {props.desc}
                     </div>
                 </div>           

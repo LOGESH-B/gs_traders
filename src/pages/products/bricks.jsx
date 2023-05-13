@@ -15,6 +15,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { featchBranch, featchCatagory } from "../../redux/api"
 import { getbranch } from "../../redux/features/branchSlice"
 import { getcatagory } from "../../redux/features/catagorySlice"
+import Loading from "../../components/Loading/loading"
 
 export default function Bricks() {
     const [admin, setadmin] = useState(false);
@@ -115,6 +116,6 @@ export default function Bricks() {
                 <ProductCard isadmin={admin} catagory={branch.category}  productdata={bricks} />
 
 
-            </> : "loding"
+            </> : <Loading/>
     )
 }

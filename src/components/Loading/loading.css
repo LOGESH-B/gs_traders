@@ -1,10 +1,15 @@
+.loading{
+    height: 100vh;
+}
+
 .loadimg{
+    
     height: 90vh;
     width: 100vw;
 }
 .load{
     position: absolute;
-    bottom: 28%;
+    bottom: 30%;
     margin-left: 48%;
     color: orange;
 
@@ -12,9 +17,15 @@
 @media (max-width:600px) {
     .load{
         position: absolute;
-        bottom: 28%;
+        bottom: 40%;
         margin-left: 40%;
         color: orange;
     
+    }
+    .loadimg{
+        position: absolute;
+        height: 50vh;
+        width: 100vw;
+        top: 20%;
     }
 }

@@ -17,6 +17,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { featchBranch, featchCatagory } from '../../../redux/api';
 import { getcatagory } from '../../../redux/features/catagorySlice';
 import { getbranch } from '../../../redux/features/branchSlice';
+import Loading from '../../../components/Loading/loading';
 
 export default function Traders() {
     const [admin, setadmin] = useState(false);
@@ -174,6 +175,6 @@ export default function Traders() {
 
 
 
-        </> : "loding"
+        </> : <Loading/>
     )
 }

@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { featchBranch, featchCatagory } from "../../redux/api"
 import { getcatagory } from "../../redux/features/catagorySlice"
 import { getbranch } from "../../redux/features/branchSlice"
+import Loading from "../../components/Loading/loading"
 
 
 
@@ -128,6 +129,6 @@ export default function Bluemetal() {
                 <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} />
                 <ProductCard isadmin={admin}  catagory={branch.category} productdata={metals} />
 
-            </> : "loading"
+            </> : <Loading/>
     )
 }
