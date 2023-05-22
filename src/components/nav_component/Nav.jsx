@@ -71,9 +71,9 @@ function Nav(props) {
 
                     </div>
 
-                    <Link to='booking' style={{ textDecoration: 'none' }} className='button' onClick={Booking}>
+                    <HashLink to='/booking' style={{ textDecoration: 'none' }} className='button' >
                         <span className='pe-4'>Book Now</span><span className='fs-1 mb-1'>&rarr;</span>
-                    </Link>
+                    </HashLink>
                 </div>
 
                 <div id='tog' onClick={() => { settogs(!togs) }} className='toggle'>

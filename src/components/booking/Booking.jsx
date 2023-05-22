@@ -369,7 +369,7 @@ function Booking() {
 
                           {inputField.category && (
                             <>
-                              <label htmlFor="product" className="form-label">Select Modal</label>
+                              <label htmlFor="product" className="form-label">Select Model</label>
                               <select className="form-select" noValidate validated={validated}
                                 required
                                 name="product"

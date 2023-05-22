@@ -16,7 +16,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { featchBranch, featchCatagory } from "../../redux/api"
 import { getcatagory } from "../../redux/features/catagorySlice"
 import { getbranch } from "../../redux/features/branchSlice"
-import Loading from "../../components/Loading/loading"
+import Loading from "../../components/loading/Loading"
 
 
 
@@ -24,50 +24,6 @@ import Loading from "../../components/Loading/loading"
 
 export default function Bluemetal() {
     const [admin, setadmin] = useState(false);
-    const bluemetal_data = [
-        {
-            _id: "1",
-            bname: 'dalmia1',
-            available: 'true',
-            approxprice: '5000',
-            img: bluelogo
-        },
-        {
-            _id: "2",
-            bname: 'dalmia2',
-            available: 'true',
-            approxprice: '5000',
-            img: bluelogo
-        },
-        {
-            _id: "3",
-            bname: 'dalmia3',
-            available: 'true',
-            approxprice: '5000',
-            img: bluelogo
-        },
-        {
-            _id: "4",
-            bname: 'dalmia4',
-            available: 'true',
-            approxprice: '5000',
-            img: bluelogo
-        },
-        {
-            _id: "5",
-            bname: 'dalmia5',
-            available: 'true',
-            approxprice: '5000',
-            img: bluelogo
-        },
-        {
-            _id: "6",
-            bname: 'dalmia6',
-            available: 'true',
-            approxprice: '5000',
-            img: bluelogo
-        }
-    ]
     const dispatch = useDispatch();
 
     //store

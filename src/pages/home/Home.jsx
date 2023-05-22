@@ -25,7 +25,7 @@ import { getcatagory } from '../../redux/features/catagorySlice'
 import { getbranch } from '../../redux/features/branchSlice'
 import Back from '../../components/back_to_top_btn/back_to_top';
 import Contact from '../../components/Contact/Contact';
-import Loading from '../../components/Loading/loading';
+import Loading from '../../components/loading/Loading';
 
 
 
@@ -101,7 +101,7 @@ function Home() {
                 <Brands/>
                 <Service />
                 <Construction />
-                {/* <Contact/> */}
+                <Contact/>
                 
                 
 

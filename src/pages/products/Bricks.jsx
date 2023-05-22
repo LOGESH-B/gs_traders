@@ -15,54 +15,10 @@ import { useDispatch, useSelector } from "react-redux"
 import { featchBranch, featchCatagory } from "../../redux/api"
 import { getbranch } from "../../redux/features/branchSlice"
 import { getcatagory } from "../../redux/features/catagorySlice"
-import Loading from "../../components/Loading/loading"
+import Loading from "../../components/loading/Loading"
 
 export default function Bricks() {
     const [admin, setadmin] = useState(false);
-    const bricks_data = [
-        {
-            _id: "1",
-            bname: 'dalmia1',
-            available: 'true',
-            approxprice: '5000',
-            img: bricklogo
-        },
-        {
-            _id: "2",
-            bname: 'dalmia2',
-            available: 'true',
-            approxprice: '5000',
-            img: bricklogo
-        },
-        {
-            _id: "3",
-            bname: 'dalmia3',
-            available: 'true',
-            approxprice: '5000',
-            img: bricklogo
-        },
-        {
-            _id: "4",
-            bname: 'dalmia4',
-            available: 'true',
-            approxprice: '5000',
-            img: bricklogo
-        },
-        {
-            _id: "5",
-            bname: 'dalmia5',
-            available: 'true',
-            approxprice: '5000',
-            img: bricklogo
-        },
-        {
-            _id: "6",
-            bname: 'dalmia6',
-            available: 'true',
-            approxprice: '5000',
-            img: bricklogo
-        }
-    ]
     const dispatch = useDispatch();
 
     //store
