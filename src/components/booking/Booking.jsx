@@ -66,12 +66,20 @@ function Booking() {
     setValidated(true)
 
     event.preventDefault();
+    event.preventDefault();
     await axios.post("http://localhost:3001/api/sendmail", { personal: personalData, product: inputFields })
-      .then(response => window.alert(response.data.respMesg));
-    Load(0);
-
+      .then(response => {
+        window.alert(response.data.respMesg);
+        setValues(initialValues);  // Clear personal details
+        setInputFields([{ category: '', product: '', qty: '' }]);  // Clear product details
+        Load(0);
+      })
+      .catch(error => {
+        console.error("There was an error sending the data!", error);
+        Load(0);
+      });
     console.log(personalData, inputFields);
-
+    
 
 
   }

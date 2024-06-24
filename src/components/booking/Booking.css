@@ -14,7 +14,7 @@
     100% { background: rgb(250, 197, 99); }
   }
   
-.pdata{
+.pdata{ 
     color: white;
     background: rgb(230, 147, 243);
     animation: color 6s infinite linear;
@@ -26,7 +26,7 @@
 .pform{
     
     padding: 5%;
-    width:60vmin;
+    width:55vmin;
 }
 .productForm{
     padding: 5%;
@@ -57,7 +57,7 @@
 }
 
 
-@media (max-width:600px)
+@media (max-width:800px)
 {
     .formcontainer
     {
@@ -71,7 +71,7 @@
    
     
 }
-@media(min-width:600px)
+@media(min-width:800px)
 {
     .add{
         margin-left: 12%;
@@ -81,8 +81,14 @@
         margin-left: 20%;
     }
     .productForm{
-        padding: 5%;
+        padding: 2%;
         width:80vw;
+    }
+    .pdata{
+        width: 50%;
+    }
+    .pform{
+        width: 35vw;
     }
     
 }

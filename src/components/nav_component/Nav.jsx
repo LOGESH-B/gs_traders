@@ -99,9 +99,9 @@ function Nav(props) {
                     <HashLink className='h' to='/#products' style={{ fontSize: 'medium', color: 'white' }}>PRODUCTS</HashLink>
 
                 </li>
-                <li><div className='button1' onClick={Booking}>
-                    <span className='pe-4'>Book Now</span><span className='fs-1 mb-1'>&rarr;</span>
-                </div></li>
+                <HashLink to='/booking' style={{ textDecoration: 'none' }} className='button' >
+                        <span className='pe-4'>Book Now</span><span className='fs-1 mb-1'>&rarr;</span>
+                    </HashLink>
             </div>
                 : <div></div>
             }

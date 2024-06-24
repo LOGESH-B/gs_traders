@@ -8,7 +8,7 @@ import ProductBanner from '../../components/product/product_banner/ProductBanner
 
 //images
 import bluelogo from '../../assets/logo/GS-logo-metal.png'
-import bgimg from '../../assets/images/matalBanner.jpeg'
+import bgimg from '../../assets/images/matalBanner.jpg'
 
 
 //redux
@@ -82,7 +82,7 @@ export default function Bluemetal() {
                 <ProductBanner bgimg={bgimg} name={'GS BLUE METALS'} content={'We offer top-quality blue metals and a wide range of construction materials, including various types of blue metals, clay bricks, and soil, available for both wholesale and retail customers. '} />
            
                 <ProductCard isadmin={admin}  catagory={branch.category} productdata={metals} />
-
+                <br></br>
             </> : <Loading/>
     )
 }

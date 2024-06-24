@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-
+import { useNavigate } from 'react-router-dom';
 //img
 import brick from '../../../assets/logo/GS-logo-brick.png'
 import metal from '../../../assets/logo/GS-logo-metal.png'
@@ -12,6 +12,7 @@ import BranchCard from './branch_card/BranchCard'
 import './Branches.css'; // Import the CSS file
 
 const Branches = (props) => {
+    const navigate=useNavigate()
     return (
         <div id='products'>
 
@@ -20,10 +21,10 @@ const Branches = (props) => {
             </div>
 
             <div className='container mt-3 '>
-                <div><BranchCard src={traders} link={"trade"} /></div>
-                <div><BranchCard src={constr} link={"construction"} /></div>
-                <div><BranchCard src={brick} link={"bricks"} /></div>
-                <div><BranchCard src={metal} link={"bluemetal"} /></div>
+                <div><BranchCard src={traders} link={'/trade'}/></div>
+                <div><BranchCard src={constr} link={"/construction"} /></div>
+                <div><BranchCard src={brick} link={"/bricks"} /></div>
+                <div><BranchCard src={metal} link={"/bluemetal"} /></div>
             </div>
         </div>
     );

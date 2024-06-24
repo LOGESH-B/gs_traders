@@ -1,7 +1,7 @@
 import './Construction.css'
 import Nav from '../../components/nav_component/Nav'
 import ProductBanner from '../../components/product/product_banner/ProductBanner'
-import bgimg from '../../assets/images/constructionBanner.jpeg'
+import bgimg from '../../assets/images/constructionBanner.jpg'
 
 import c1 from '../../assets/construction/cons1.jpg'
 import c2 from '../../assets/construction/cons2.jpg'
@@ -41,7 +41,7 @@ function Construction() {
       <Nav img={conslogo} w={200}/>
       <ProductBanner bgimg={bgimg} name={'GS CONSTRUCTION'} content={'GS Construction offers top-notch planning, blueprints, estimations, elevation designs, consulting, and labor work, ensuring high-quality and fast project delivery.'} />
       <div className="swiper-container">
-        <Swiper
+      <Swiper
           effect={'coverflow'}
           grabCursor={true}
           centeredSlides={true}
@@ -68,18 +68,9 @@ function Construction() {
             </SwiperSlide>
           ))}
 
-          <div className="slider-controler">
-            <div className="swiper-button-prev slider-arrow">
-              <ion-icon name="arrow-back-outline"></ion-icon>
-            </div>
-            <br/>
-              <center className="swiper-pagination"></center>
-            <div className="swiper-button-next slider-arrow">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-
-          </div>
+        
         </Swiper>
+         
       </div>
     </>
   );

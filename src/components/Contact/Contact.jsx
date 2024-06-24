@@ -25,16 +25,16 @@ export default function Contact() {
                 </div>
 
 
-                <div className='col-lg-3 mt-5'>
+                <div className='col-lg-50 mt-5 ml-3 p-2 con'>
                     <div className='d-flex'>
                         <h5 className='data mt-2'>email:</h5>
-                        <ul>
+                        <ul >
                             <li><a className='mailcon' href="mailto:gsgroups@gmail.com" >gsgroups@gmail.com</a></li>
                             <li><a className='mailcon' href="mailto:ponvishnugs@gmail.com" >ponvishnugs@gmail.com</a></li>
-                            <li><a className='mailcon' href="mailto:pradeepangangags@gmail.com" >pradeepangangags@gmail.com</a></li>
+                            <li ><a className='mailcon' href="mailto:pradeepangangags@gmail.com" >pradeepangangags@gmail.com</a></li>
                         </ul>
                     </div>
-                    <div className='d-flex'>
+                    <div className='d-flex ' >
                         <h5 className='data mt-2'>phone:</h5>
                         <ul>
                             <li>PonVishnu - 8344941266</li>
