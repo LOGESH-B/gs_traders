@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @keyframes color {
   0%   { background: rgb(147, 32, 142); }
@@ -8,88 +8,81 @@
 }
 @keyframes fcolor {
    
-    0%  { background: orange; } 
+    0%  { background: rgb(250, 187, 70); } 
     40%  { background: #f9e46e; }
-    70%  { background: #f8a54c; }
-    100% { background: rgb(251, 127, 3); }
-  } */
-.formh {
-    color: orangered;
-}
-
-.pdata {
-    color: black;
-
-    border-radius: 10px;
-
-
-}
-
-.pform {
-
-    padding: 5%;
-
-}
-
-.productForm {
-
-    border-radius: 10px;
-
-}
-
-.formcontainer>.company {
-    width: 25%;
-}
-
-.formcontainer>.quantity {
-    width: 33%;
-}
-
-.formcontainer {
-    /* display: flex; */
-    width: 100%;
-
-
-}
-
-.vr {
-    height: 70vh;
-    padding: 0.5px;
-}
-
-.add {
-    margin: 10px;
-    font-weight: bold;
-}
-
-.buttons {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.subbtn{
-    background-color:rgba(255, 127, 7, 1) ;
+    70%  { background: #faaa55; }
+    100% { background: rgb(250, 197, 99); }
+  }
+  
+.pdata{
     color: white;
-    width: 150px;
+    background: rgb(230, 147, 243);
+    animation: color 6s infinite linear;
+    border-radius: 10px;
+    width:90%;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+.pform{
+    
+    padding: 5%;
+    width:60vmin;
+}
+.productForm{
+    padding: 5%;
+    width:70vmin;
+}
+
+.productForm{
+    background: rgb(251, 127, 3);
+    animation: fcolor 6s infinite linear;
+    border-radius: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.formcontainer{
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+.qty{
+    width:130%;
 }
 .add{
-    background-color:rgba(255, 127, 7, 1) ;
-    color: white;
+    margin: 10px;
+    font-weight:bold;
 }
-.add:hover,
-.subbtn:hover{
-    background-color: rgba(255, 127, 7, 1);
-    color: white;
-}
-@media (max-width:600px) {
-    .vr {
-        display: none;
-    }
-
+.buttons
+{
+    margin-left: 40%;
 }
 
-@media(min-width:800px) {
-    .vr {
-        display: inline-block;
+
+@media (max-width:600px)
+{
+    .formcontainer
+    {
+        display:block;
+        width:70%;
+        margin-left: 14%;
     }
+    .qty{
+        width:100%;
+    }
+   
+    
+}
+@media(min-width:600px)
+{
+    .add{
+        margin-left: 12%;
+    }
+    .buttons
+    {
+        margin-left: 20%;
+    }
+    .productForm{
+        padding: 5%;
+        width:80vw;
+    }
+    
 }

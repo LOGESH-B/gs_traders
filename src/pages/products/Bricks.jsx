@@ -7,7 +7,7 @@ import Nav from '../../components/nav_component/Nav'
 import ProductBanner from '../../components/product/product_banner/ProductBanner'
 
 //images
-import bgimg from '../../assets/images/pheader.jpeg'
+import bgimg from '../../assets/images/brickBanner.jpeg'
 import bricklogo from '../../assets/logo/GS-logo-brick.png'
 
 //redux
@@ -65,10 +65,10 @@ export default function Bricks() {
     return (
         bricks && branch ?
             <>
-                <Nav img={bricklogo} w={150} />
-                {/* <ProductBanner bgimg={bgimg} name={'Bricks'} content={'we are the gs bluemetals we provide high quality bluemetals .we supply all kind of bluemetals'} />
-            <ProductCard subproduct={'Bricks'} subproduct2={''} productdata={bricks_data}  /> */}
-                <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} />
+                <Nav img={bricklogo} w={200} />
+                <ProductBanner bgimg={bgimg} name={'Bricks'} content={'We are the manufacturers of premium-quality bricks, including interlock, flyash, and hollow bricks. Our products are available for both wholesale and retail customers, ensuring superior quality and durability for all your construction needs.'} />
+           
+                {/* <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} /> */}
                 <ProductCard isadmin={admin} catagory={branch.category}  productdata={bricks} />
 
 

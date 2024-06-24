@@ -1,85 +1,14 @@
-/* services page */
+.branch {
 
-.s {
+  margin-left: 25px;
+  color: orangered;
+}
 
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.s1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-
-}
-
-.image-service {
-  height: 400px;
-  width: 100%;
-
-}
-
-.servicelist {
-  margin-left: 150px;
-  gap: 40px;
-}
-
-.servicelist1 {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 135px;
-  gap: 40px;
-
-}
-
-.btnclass1 {
-  background-color: rgb(255, 127, 7);
-  width: 45px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 25%;
-  margin-top: 10%;
-
-}
-
-.specialcard {
-  background-image: url('../../../assets/images/serviceimg.webp');
-  color: beige;
-}
-
-
-
-
-
-
-
-.owner1 {
-  background-color: none;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-
-.w {
-  margin-left: 9%;
-}
-
-.w1 {
-  margin-left: 9%;
-  margin-top: 0% !important;
-}
-
-.simage {
-  height: 80%;
-  width: 70%;
-  margin-left: 22%;
-}
-
-.ser {
-  text-align: justify;
-  padding: 5%;
+  flex-wrap: wrap;
+  
+  justify-content: space-around;
+  gap: 30px; /* Adds spacing between cards */
+  padding: 20px; /* Adds padding around the container */
 }

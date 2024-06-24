@@ -162,11 +162,10 @@ export default function Traders() {
 
 
             <div className='modalback'>
-                <Nav img={tradelogo} w={150} />
-                {/* <ProductBanner bgimg={bgimg} name={'GS TRADERS'} content={'we are the gs traders we provide hight quality cement and steel.we supply all popular brands of cement and steel in tamilnadu'} />
-                <ProductCard subproduct={'CEMENT'} subproduct2={'STEEL'} productdata={cement_data} productdata2={steel_data} /> */}
-
-                <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} />
+                <Nav img={tradelogo} w={180} />
+                <ProductBanner bgimg={bgimg} name={'GS TRADERS'} content={'We supply all popular brands of cement and steel, catering to both wholesale and retail customers'} />
+               
+                {/* <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} /> */}
                 <ProductCard isadmin={admin} catagory={branch.category} productdata={cement} />
 
 

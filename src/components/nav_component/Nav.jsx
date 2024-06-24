@@ -56,16 +56,21 @@ function Nav(props) {
             </div>
             <div className='nav'>
                 <div className='navcontent1'>
-                    <img style={{ width: props.w }} className='logo' src={props.img ? props.img : logo} alt={props.img} />
+                    <a href="/admin/login">
+                        <img
+                            style={{ width: props.w }}
+                            className='logo'
+                            src={props.img ? props.img : logo}
+                            alt={props.img}
+                        />
+                    </a>
                 </div>
+
                 <div className=" navcontent" >
                     <div className='content'>
                         <HashLink className='h' style={{ fontSize: 'medium', textDecoration: 'none' }} to="/">HOME</HashLink>
-
-                        <HashLink className='h' to='/#about' style={{ fontSize: 'medium' }}>CONTACT</HashLink>
-
-
                         <HashLink className='h' to='/#products' style={{ fontSize: 'medium' }}>PRODUCTS</HashLink>
+                        <HashLink className='h' to='/#about' style={{ fontSize: 'medium' }}>CONTACT</HashLink>
 
 
 
@@ -84,14 +89,14 @@ function Nav(props) {
             </div>
             {togs ? <div className='dropdown'>
 
-                <li> <HashLink className='h' style={{ fontSize: 'medium', textDecoration: 'none',color:'white' }} to="/">HOME</HashLink>
+                <li> <HashLink className='h' style={{ fontSize: 'medium', textDecoration: 'none', color: 'white' }} to="/">HOME</HashLink>
                 </li>
-                
+
                 <li>
-                    <HashLink className='h' to='/#about' style={{ fontSize: 'medium',color:'white' }}>CONTACT</HashLink>
+                    <HashLink className='h' to='/#about' style={{ fontSize: 'medium', color: 'white' }}>CONTACT</HashLink>
                 </li>
                 <li>
-                    <HashLink className='h' to='/#products' style={{ fontSize: 'medium',color:'white' }}>PRODUCTS</HashLink>
+                    <HashLink className='h' to='/#products' style={{ fontSize: 'medium', color: 'white' }}>PRODUCTS</HashLink>
 
                 </li>
                 <li><div className='button1' onClick={Booking}>
