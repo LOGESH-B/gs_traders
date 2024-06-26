@@ -67,7 +67,7 @@ function Booking() {
 
     event.preventDefault();
     event.preventDefault();
-    await axios.post("http://localhost:3001/api/sendmail", { personal: personalData, product: inputFields })
+    await axios.post("https://gsgroups.onrender.com/api/sendmail", { personal: personalData, product: inputFields })
       .then(response => {
         window.alert(response.data.respMesg);
         setValues(initialValues);  // Clear personal details
