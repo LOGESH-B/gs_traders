@@ -42,7 +42,7 @@ const Banner1 = (props) => {
                         <small>Largest suppliers in sivagiri</small>
                         <hr /> */}
                     </div>
-                    <div className='row mail'>
+                    {/* <div className='row mail'>
                         <input className='col-8 m '
                            placeholder= "Enter your Mail"
                         />
@@ -53,11 +53,11 @@ const Banner1 = (props) => {
 
                     <div style={{ marginLeft: '50%' }}>
                         or
-                    </div>
-                    <div className='number'>
+                    </div> */}
+                    {/* <div className='number'>
                         <FaPhoneAlt />
                         <small> Call us at {props.phn}</small>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

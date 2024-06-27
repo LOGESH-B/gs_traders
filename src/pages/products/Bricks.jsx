@@ -7,7 +7,7 @@ import Nav from '../../components/nav_component/Nav'
 import ProductBanner from '../../components/product/product_banner/ProductBanner'
 
 //images
-import bgimg from '../../assets/images/pheader.jpeg'
+import bgimg from '../../assets/images/brickBanner.jpg'
 import bricklogo from '../../assets/logo/GS-logo-brick.png'
 
 //redux
@@ -15,53 +15,10 @@ import { useDispatch, useSelector } from "react-redux"
 import { featchBranch, featchCatagory } from "../../redux/api"
 import { getbranch } from "../../redux/features/branchSlice"
 import { getcatagory } from "../../redux/features/catagorySlice"
+import Loading from "../../components/loading/Loading"
 
 export default function Bricks() {
     const [admin, setadmin] = useState(false);
-    const bricks_data = [
-        {
-            _id: "1",
-            bname: 'dalmia1',
-            available: 'true',
-            approxprice: '5000',
-            img: bricklogo
-        },
-        {
-            _id: "2",
-            bname: 'dalmia2',
-            available: 'true',
-            approxprice: '5000',
-            img: bricklogo
-        },
-        {
-            _id: "3",
-            bname: 'dalmia3',
-            available: 'true',
-            approxprice: '5000',
-            img: bricklogo
-        },
-        {
-            _id: "4",
-            bname: 'dalmia4',
-            available: 'true',
-            approxprice: '5000',
-            img: bricklogo
-        },
-        {
-            _id: "5",
-            bname: 'dalmia5',
-            available: 'true',
-            approxprice: '5000',
-            img: bricklogo
-        },
-        {
-            _id: "6",
-            bname: 'dalmia6',
-            available: 'true',
-            approxprice: '5000',
-            img: bricklogo
-        }
-    ]
     const dispatch = useDispatch();
 
     //store
@@ -108,13 +65,13 @@ export default function Bricks() {
     return (
         bricks && branch ?
             <>
-                <Nav img={bricklogo} w={150} />
-                {/* <ProductBanner bgimg={bgimg} name={'Bricks'} content={'we are the gs bluemetals we provide high quality bluemetals .we supply all kind of bluemetals'} />
-            <ProductCard subproduct={'Bricks'} subproduct2={''} productdata={bricks_data}  /> */}
-                <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} />
+                <Nav img={bricklogo} w={200} />
+                <ProductBanner bgimg={bgimg} name={'GS BRICK INDUSTRY'} content={'We are the manufacturers of premium-quality bricks, including interlock, flyash, and hollow bricks. Our products are available for both wholesale and retail customers, ensuring superior quality and durability for all your construction needs.'} />
+           
+                {/* <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} /> */}
                 <ProductCard isadmin={admin} catagory={branch.category}  productdata={bricks} />
+                <br></br>
 
-
-            </> : "loding"
+            </> : <Loading/>
     )
 }

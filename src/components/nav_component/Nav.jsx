@@ -6,21 +6,21 @@ import { Link } from 'react-router-dom'
 import Booking from '../booking/Booking';
 import { useDispatch, useSelector } from 'react-redux';
 import { featchConstant } from '../../redux/api';
-import logo from  "../../assets/logo/GS-logo.png"
+import logo from "../../assets/logo/GS-logo.png"
 import { HashLink } from 'react-router-hash-link';
 // import {Link} from 'react-router-dom'
 
-import {constant} from '../../redux/features/homeSlice'
+import { constant } from '../../redux/features/homeSlice'
 
 function Nav(props) {
     const dispatch = useDispatch();
     const constants = useSelector(state => state.home);
     const [togs, settogs] = useState(false);
-    const api=async()=>{
-        try{
-            const constant_res=await featchConstant();
+    const api = async () => {
+        try {
+            const constant_res = await featchConstant();
             dispatch(constant(constant_res));
-        }catch(e){
+        } catch (e) {
             console.log(e);
         }
 
@@ -30,18 +30,18 @@ function Nav(props) {
     }
     var phn = constants?.contact;
     var email = constants?.email;
-// useEffect(()=>{
-//     document.addEventListener("mousedown", (e)=> {
-//        if(!menuRef.current.contains(e.target)){
-//         settogs(false);
+    // useEffect(()=>{
+    //     document.addEventListener("mousedown", (e)=> {
+    //        if(!menuRef.current.contains(e.target)){
+    //         settogs(false);
 
-//        }
-   
-        
-//    }
-//    ,false);
-// })
-    
+    //        }
+
+
+    //    }
+    //    ,false);
+    // })
+
     return (
         <>
 
@@ -56,24 +56,29 @@ function Nav(props) {
             </div>
             <div className='nav'>
                 <div className='navcontent1'>
-                    <img style={{ width: props.w }} className='logo' src={props.img?props.img:logo} alt={props.img} />
+                    <a href="/admin/login">
+                        <img
+                            style={{ width: props.w }}
+                            className='logo'
+                            src={props.img ? props.img : logo}
+                            alt={props.img}
+                        />
+                    </a>
                 </div>
+
                 <div className=" navcontent" >
                     <div className='content'>
                         <HashLink className='h' style={{ fontSize: 'medium', textDecoration: 'none' }} to="/">HOME</HashLink>
-
-                        <HashLink className='h' to='/#about' style={{ fontSize: 'medium' }}>CONTACT</HashLink>
-
-
                         <HashLink className='h' to='/#products' style={{ fontSize: 'medium' }}>PRODUCTS</HashLink>
+                        <HashLink className='h' to='/#about' style={{ fontSize: 'medium' }}>CONTACT</HashLink>
 
 
 
                     </div>
 
-                    <Link to='booking' style={{ textDecoration: 'none' }} className='button' onClick={Booking}>
+                    <HashLink to='/booking' style={{ textDecoration: 'none' }} className='button' >
                         <span className='pe-4'>Book Now</span><span className='fs-1 mb-1'>&rarr;</span>
-                    </Link>
+                    </HashLink>
                 </div>
 
                 <div id='tog' onClick={() => { settogs(!togs) }} className='toggle'>
@@ -84,12 +89,19 @@ function Nav(props) {
             </div>
             {togs ? <div className='dropdown'>
 
-                <li> <Link className='h' style={{ fontSize: 'medium', color: 'white' }}>HOME</Link></li>
-                <li> <Link className='h' style={{ fontSize: 'medium', color: 'white' }}>CONTACT</Link></li>
-                <li><Link className='h' style={{ fontSize: 'medium', color: 'white' }}>PRODUCTS</Link></li>
-                <li><div className='button1' onClick={Booking}>
-                    <span className='pe-4'>Book Now</span><span className='fs-1 mb-1'>&rarr;</span>
-                </div></li>
+                <li> <HashLink className='h' style={{ fontSize: 'medium', textDecoration: 'none', color: 'white' }} to="/">HOME</HashLink>
+                </li>
+
+                <li>
+                    <HashLink className='h' to='/#about' style={{ fontSize: 'medium', color: 'white' }}>CONTACT</HashLink>
+                </li>
+                <li>
+                    <HashLink className='h' to='/#products' style={{ fontSize: 'medium', color: 'white' }}>PRODUCTS</HashLink>
+
+                </li>
+                <HashLink to='/booking' style={{ textDecoration: 'none' }} className='button' >
+                        <span className='pe-4'>Book Now</span><span className='fs-1 mb-1'>&rarr;</span>
+                    </HashLink>
             </div>
                 : <div></div>
             }

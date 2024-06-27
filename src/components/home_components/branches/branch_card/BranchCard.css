@@ -1,30 +1,39 @@
-.btnclass {
-    background-color: rgb(255, 127, 7);
-    width: 45px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5%;
-    margin-top: 10%;
-
+.branch-card {
+    width: 450px; /* Ensures all cards have the same width */
+    height: 250px; /* Ensures all cards have the same height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow to cards */
+    border-radius: 8px; /* Rounds the corners of cards */
+    overflow: hidden; /* Ensures content within cards doesn't overflow */
+    text-align: center; /* Centers text within cards */
+    background-color: rgba(193, 247, 188, 0.591); /* Sets the background color of cards */
+    transition: transform 0.2s, box-shadow 0.2s; /* Adds smooth transition effects */
 }
 
-.learn {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
+.branch-card:hover {
+    transform: translateY(-10px); /* Moves the card up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increases shadow on hover */
 }
 
-.btnarrow {
-    position: relative;
-    margin-right: 35px;
-
-
+.branch-card img {
+   
+    width: 100%; /* Makes images take up the full width of the card */
+    height: 100%; /* Makes images take up 70% of the card height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-top: 5%;
+    padding: 10px;
 }
 
-.s2 {
-    text-align: justify;
-    border: solid 1px gray;
-    width: 20%;
+@media  (max-width:600px){
+    .branch-card{
+        width: 55vw;
+        height: 30vw;
+        
+    }
+}
+@media  (min-width:600px){
+    .branch-card{
+        width: 30vw;
+        height: 100%;
+        
+    }
 }

@@ -8,7 +8,7 @@ import ProductBanner from '../../components/product/product_banner/ProductBanner
 
 //images
 import bluelogo from '../../assets/logo/GS-logo-metal.png'
-import bgimg from '../../assets/images/pheader.jpeg'
+import bgimg from '../../assets/images/matalBanner.jpg'
 
 
 //redux
@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { featchBranch, featchCatagory } from "../../redux/api"
 import { getcatagory } from "../../redux/features/catagorySlice"
 import { getbranch } from "../../redux/features/branchSlice"
+import Loading from "../../components/loading/Loading"
 
 
 
@@ -23,50 +24,6 @@ import { getbranch } from "../../redux/features/branchSlice"
 
 export default function Bluemetal() {
     const [admin, setadmin] = useState(false);
-    const bluemetal_data = [
-        {
-            _id: "1",
-            bname: 'dalmia1',
-            available: 'true',
-            approxprice: '5000',
-            img: bluelogo
-        },
-        {
-            _id: "2",
-            bname: 'dalmia2',
-            available: 'true',
-            approxprice: '5000',
-            img: bluelogo
-        },
-        {
-            _id: "3",
-            bname: 'dalmia3',
-            available: 'true',
-            approxprice: '5000',
-            img: bluelogo
-        },
-        {
-            _id: "4",
-            bname: 'dalmia4',
-            available: 'true',
-            approxprice: '5000',
-            img: bluelogo
-        },
-        {
-            _id: "5",
-            bname: 'dalmia5',
-            available: 'true',
-            approxprice: '5000',
-            img: bluelogo
-        },
-        {
-            _id: "6",
-            bname: 'dalmia6',
-            available: 'true',
-            approxprice: '5000',
-            img: bluelogo
-        }
-    ]
     const dispatch = useDispatch();
 
     //store
@@ -121,13 +78,11 @@ export default function Bluemetal() {
         metals && branch ?
             <>
 
-                <Nav img={bluelogo} w={150} />
-                {/* <ProductBanner bgimg={bgimg} name={'GS BLUE METALS'} content={'we are the gs bluemetals we provide high quality bluemetals .we supply all kind of bluemetals'} />
-            <ProductCard subproduct={'BLUE METALS'} subproduct2={''} productdata={bluemetal_data}  /> */}
-
-                <ProductBanner name={branch.name} bgimg={bgimg} content={branch.description} />
+                <Nav img={bluelogo} w={200} />
+                <ProductBanner bgimg={bgimg} name={'GS BLUE METALS'} content={'We offer top-quality blue metals and a wide range of construction materials, including various types of blue metals, clay bricks, and soil, available for both wholesale and retail customers. '} />
+           
                 <ProductCard isadmin={admin}  catagory={branch.category} productdata={metals} />
-
-            </> : "loading"
+                <br></br>
+            </> : <Loading/>
     )
 }
